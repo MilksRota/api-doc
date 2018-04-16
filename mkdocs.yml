@@ -36,5 +36,5 @@ markdown_extensions:
 pages:
   - API de integração: 'index.md'
   - Métodos disponíveis: 'metodos.md'
-  - Anexos: 'Anexos.md'
+  - Anexos: 'anexos.md'
   - Contato: 'contato.md'
