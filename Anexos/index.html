@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Anexos - Milk's Rota - API de Integração</title>
+      
+      
+      
+        <link rel="canonical" href="http://www.milksrota.com.br/Anexos/">
+      
+      
+        <meta name="author" content="Otávio Fernandes">
+      
+    
+    <meta property="og:url" content="http://www.milksrota.com.br/Anexos/">
+    <meta property="og:title" content="Milk's Rota - API de Integração">
+    <meta property="og:image" content="http://www.milksrota.com.br/Anexos//../images/logo-300x82.png">
+    <meta name="apple-mobile-web-app-title" content="Milk's Rota - API de Integração">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../images/logo-300x82.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-b64b728552.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        Anexos
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/oaugustus" title="@oaugustus on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Procurar" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Procurar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="">
+          <img src="../images/logo-300x82.png" style="width: 200px;">
+        </div>
+        <div style="text-align: right;">Versão 1.2</div>
+      
+      <!--<div class="name">
+        <strong>Milk's Rota - API de Integração Versão 1.2</strong>
+        
+      </div>-->
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="API de integração" href="..">
+      API de integração
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Métodos disponíveis" href="../metodos/">
+      Métodos disponíveis
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="Anexos" href="./">
+      Anexos
+    </a>
+    
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Modelos Arquivos JSON" href="#modelos-arquivos-json">
+                Modelos Arquivos JSON
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Contato" href="../contato/">
+      Contato
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">Autor</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/oaugustus" target="_blank" title="@oaugustus on GitHub">
+                  @oaugustus no GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+            <h1>Anexos</h1>
+          
+          <h2 id="modelos-arquivos-json">Modelos Arquivos JSON<a class="headerlink" href="#modelos-arquivos-json" title="Permanent link">#</a></h2>
+<hr />
+<p><a name="tbgruporotas" > </p>
+<h3 id="grupo-de-rotas"><strong>Grupo de Rotas</strong><a class="headerlink" href="#grupo-de-rotas" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeGrupoRota  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;001&quot;,
+          &quot;nome&quot;:&quot;FM_PARA_MINAS&quot;,
+          &quot;deleted&quot;:&quot;0&quot;
+         }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbrotas" > </p>
+<h3 id="rotas"><strong>Rotas</strong><a class="headerlink" href="#rotas" title="Permanent link">#</a></h3>
+<p></a></p>
+<p>URI: http://app.sclrota.com.br/api/retaguardasync/writeRota  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+  &quot;data&quot;:[{&quot;codigo&quot;:&quot;001&quot;,
+           &quot;nome&quot;:&quot;Rota_001&quot;,
+           &quot;Tipo_Descarga&quot;:&quot;DP&quot;,
+           &quot;grupo_rota&quot;:&quot;001&quot;;
+           &quot;deleted&quot;:&quot;0&quot;
+           }
+         ]
+ }  </code></pre>
+
+
+<p><a name="tblinhas" > </p>
+<h3 id="linhas-de-coleta"><strong>Linhas de Coleta</strong><a class="headerlink" href="#linhas-de-coleta" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeLinha  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;001&quot;,
+          &quot;nome&quot;:&quot;Linha_001&quot;,
+          &quot;distancia&quot;:&quot;100.00&quot;,
+          &quot;rota&quot;:&quot;001&quot;,
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbcoletores" > </p>
+<h3 id="motoristas-coletores"><strong>Motoristas / Coletores</strong><a class="headerlink" href="#motoristas-coletores" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeColetor  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;001&quot;,
+          &quot;nome&quot;:&quot;Jose Antonio&quot;,
+          &quot;rg&quot;:&quot;MG 3201011&quot;,
+          &quot;cpf&quot;:&quot;59613653618&quot;,
+          &quot;cnh&quot;:&quot;78522552244&quot;,        
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbprodutores" > </p>
+<h3 id="produtores"><strong>Produtores</strong><a class="headerlink" href="#produtores" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeProdutor  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;P001&quot;,
+          &quot;nome&quot;:&quot;Jose Maria Melo&quot;,
+          &quot;logradouro&quot;:&quot;Rua X&quot;,
+          &quot;numero&quot;:&quot;99&quot;,
+          &quot;bairro&quot;:&quot;centro&quot;,          
+          &quot;cidade&quot;:&quot;Sao Paulo&quot;,       
+          &quot;uf&quot;:&quot;SP&quot;,          
+          &quot;cep&quot;:&quot;11850000&quot;,
+          &quot;doc&quot;:&quot;SP 96801125&quot;,                
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbfazendas" > </p>
+<h3 id="fazendas"><strong>Fazendas</strong><a class="headerlink" href="#fazendas" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeFazenda  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;F001&quot;,
+          &quot;nome&quot;:&quot;Fazenda Sol Nascente&quot;,
+          &quot;logradouro&quot;:&quot;Regiao Furquilha&quot;,
+          &quot;numero&quot;:&quot;00&quot;,
+          &quot;bairro&quot;:&quot;Zona Rural&quot;,          
+          &quot;cidade&quot;:&quot;Sao Paulo&quot;,       
+          &quot;uf&quot;:&quot;SP&quot;,          
+          &quot;cep&quot;:&quot;11850000&quot;,
+          &quot;latitude&quot;:&quot;11853345&quot;,
+          &quot;longitude&quot;:&quot;1195000&quot;,
+          &quot;produtor&quot;:&quot;P001&quot;,                  
+          &quot;deleted&quot;:&quot;0&quot;
+          },
+          {&quot;codigo&quot;:&quot;F002&quot;,
+          &quot;nome&quot;:&quot;Fazenda Miramar&quot;,
+          &quot;logradouro&quot;:&quot;Rodovia BR 101&quot;,
+          &quot;numero&quot;:&quot;KM 234&quot;,
+          &quot;bairro&quot;:&quot;Zona Rural&quot;,          
+          &quot;cidade&quot;:&quot;Rio de Janeiro&quot;,          
+          &quot;uf&quot;:&quot;RJ&quot;,          
+          &quot;cep&quot;:&quot;22530000&quot;,
+          &quot;latitude&quot;:&quot;11743345&quot;,
+          &quot;longitude&quot;:&quot;1176000&quot;,
+          &quot;produtor&quot;:&quot;P002&quot;,                  
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbveiculos" > </p>
+<h3 id="veiculos"><strong>Veículos</strong><a class="headerlink" href="#veiculos" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeVeiculo  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;V001&quot;,
+          &quot;placa&quot;:&quot;XXX-9999&quot;,
+          &quot;tipo&quot;:&quot;V&quot;,
+          &quot;pesobruto&quot;:&quot;99999&quot;,
+          &quot;pesoliquido&quot;:&quot;99999&quot;,          
+          &quot;capacidade&quot;:&quot;99999&quot;,                               
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbtanques" > </p>
+<h3 id="tanques"><strong>Tanques</strong><a class="headerlink" href="#tanques" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeTanque </p>
+<p>A Entidade Tanque recebe os registros de todos os repositórios de armazenamento. Resfriadores das fazendas, compartimentos dos veiculos transportadores, balões e silos de armazenamento na plataforma.</p>
+<p>O Atributo "<strong>tipo</strong>" define a função do compartimento e dependendo deste atributo, somente um código de veículo, produtor, fazenda ou coletor será informado, os demais deverão ficar sem valor ("").</p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;T001&quot;,
+          &quot;tipo&quot;:&quot;V&quot;,
+          &quot;veiculo&quot;:&quot;V001&quot;,
+          &quot;fazenda&quot;:&quot;&quot;,
+          &quot;comunitario&quot;:&quot;0&quot;,          
+          &quot;comunitario_lancamento&quot;:&quot;&quot;,                                
+          &quot;comunitario_divisao&quot;:&quot;&quot;,
+          &quot;comunitario_diferenca&quot;:&quot;&quot;,                                         
+          &quot;comunitario_impressao&quot;:&quot;&quot;,
+          &quot;porcentagem&quot;:&quot;&quot;,                                 
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbextratos" > </p>
+<h3 id="extratos-de-coleta"><strong>Extratos de Coleta</strong><a class="headerlink" href="#extratos-de-coleta" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeExtrato </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;produtor&quot;:&quot;P001&quot;,
+          &quot;dt_coleta&quot;:&quot;2016-09-09&quot;,
+          &quot;quantidade&quot;:&quot;958&quot;,
+          &quot;temperatura&quot;:&quot;2.5&quot;         
+          },
+          {&quot;produtor&quot;:&quot;P001&quot;,
+          &quot;dt_coleta&quot;:&quot;2016-09-07&quot;,
+          &quot;quantidade&quot;:&quot;1032&quot;,
+          &quot;temperatura&quot;:&quot;2.8&quot;         
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbitinerarios" > </p>
+<h3 id="itinerarios"><strong>Itinerarios</strong><a class="headerlink" href="#itinerarios" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeItinerario </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;fazenda&quot;:&quot;F001&quot;,
+          &quot;rota&quot;:&quot;R001&quot;,
+          &quot;linha&quot;:&quot;L001&quot;,
+          &quot;ordem&quot;:&quot;1&quot;   
+          &quot;horario&quot;:&quot;07:00&quot;     
+          },
+         {&quot;fazenda&quot;:&quot;F003&quot;,
+          &quot;rota&quot;:&quot;R001&quot;,
+          &quot;linha&quot;:&quot;L001&quot;,
+          &quot;ordem&quot;:&quot;2&quot;   
+          &quot;horario&quot;:&quot;07:45&quot;     
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbtecnicos" > </p>
+<h3 id="tecnicos-de-plataforma-e-seguidores-de-rota"><strong>Tecnicos de Plataforma e Seguidores de Rota</strong><a class="headerlink" href="#tecnicos-de-plataforma-e-seguidores-de-rota" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeTecnico  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;L001&quot;,
+          &quot;nome&quot;:&quot;Joao Carlos Cardoso&quot;,
+          &quot;rg&quot;:&quot;MG 7022015&quot;,
+          &quot;cpf&quot;:&quot;59613653688&quot;,
+          &quot;email&quot;:&quot;j.carloscardoso@gmail.com&quot;,        
+          &quot;telefone&quot;:&quot;37999811133&quot;,       
+          &quot;imei&quot;:&quot;7522999855554445&quot;,                  
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbtags" > </p>
+<h3 id="tags-nfc"><strong>Tags NFC </strong><a class="headerlink" href="#tags-nfc" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeTag  </p>
+<p>Modelo Arquivo JSON Mensagem</p>
+<p>O Atributo "<strong>tipo</strong>" define que ator será identificado e dependendo deste atributo, somente um código de veículo, tanque, tecnico ou coletor será informado, os demais deverão ficar sem valor ("").</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;tipo&quot;:&quot;V&quot;,
+          &quot;tagid&quot;:&quot;AAA174E45&quot;,
+          &quot;coletor&quot;:&quot;&quot;,
+          &quot;tecnico&quot;:&quot;&quot;,
+          &quot;tanque&quot;:&quot;&quot;,        
+          &quot;veiculo&quot;:&quot;V001&quot;,               
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbanalises" > </p>
+<h3 id="resultados-das-analises-de-qualidade"><strong>Resultados das Analises de qualidade </strong><a class="headerlink" href="#resultados-das-analises-de-qualidade" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeAnalise  </p>
+<p>Modelo Arquivo JSON Mensagem  </p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;produtor&quot;:&quot;P001&quot;,
+          &quot;teor_gordura&quot;:&quot;305&quot;,
+          &quot;ccs&quot;:&quot;400&quot;,
+          &quot;ufc&quot;:&quot;100&quot;,
+          &quot;proteinas&quot;:&quot;2000&quot;,         
+          &quot;esd&quot;:&quot;450&quot;,
+          &quot;lactose&quot;:&quot;&quot;,       
+          &quot;deleted&quot;:&quot;0&quot;
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbmotivos" > </p>
+<h3 id="motivos-de-cancelamento-de-coletas-aceitaveis"><strong>Motivos de cancelamento de coletas aceitáveis </strong><a class="headerlink" href="#motivos-de-cancelamento-de-coletas-aceitaveis" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeMotivo  </p>
+<p>Modelo Arquivo JSON Mensagem  </p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;MC001&quot;,
+          &quot;motivo&quot;:&quot;Lama na Estrada&quot;,
+          &quot;exige_foto&quot;:&quot;1&quot;,
+          &quot;envia_notificação&quot;:&quot;0&quot;,
+          &quot;gravidade&quot;:&quot;B&quot;                                 
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbvinculados" > </p>
+<h3 id="produtores-participantes-dos-tanques-coletivos-ou-comunitarios"><strong>Produtores Participantes dos Tanques Coletivos ou Comunitários</strong><a class="headerlink" href="#produtores-participantes-dos-tanques-coletivos-ou-comunitarios" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeVinculado  </p>
+<p>Modelo Arquivo JSON Mensagem  </p>
+<p>O atributo "<strong>proprietario</strong>" devine o participante responsável pelo registros de volume armazenados no tanque, e dependendo da configuração da plataforma, as diferenças podem ser creditadas ou debitadas na conta deste produtor. Somente um registro deve ser envidado com esta propriedade assinalada com "1" para cada conjunto de participantes de um mesmo tanque.</p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;001&quot;,
+          &quot;tanque&quot;:&quot;T001&quot;,
+          &quot;produtor&quot;:&quot;P001&quot;,
+          &quot;proprietario&quot;:&quot;1&quot;,
+          &quot;procentagem&quot;:&quot;60&quot;                                  
+          },
+          {&quot;codigo&quot;:&quot;002&quot;,
+          &quot;tanque&quot;:&quot;T001&quot;,
+          &quot;produtor&quot;:&quot;P005&quot;,
+          &quot;proprietario&quot;:&quot;0&quot;,
+          &quot;procentagem&quot;:&quot;40&quot;                                  
+          }
+        ]
+}  </code></pre>
+
+
+<p><a name="tbseguidores" > </p>
+<h3 id="notificacoes-para-seguidores-de-rota"><strong>Notificações para seguidores de rota </strong><a class="headerlink" href="#notificacoes-para-seguidores-de-rota" title="Permanent link">#</a></h3>
+<p></a>
+  URI: http://app.sclrota.com.br/api/retaguardasync/writeSeguidor  </p>
+<p>Modelo Arquivo JSON Mensagem  </p>
+<pre class="code"><code>{&quot;conta_id&quot;:70387,
+ &quot;data&quot;:[{&quot;codigo&quot;:&quot;001&quot;,
+          &quot;gruporota&quot;:&quot;0001&quot;,
+          &quot;tecnico&quot;:&quot;L001&quot;,
+          &quot;baixa&quot;:&quot;0&quot;,
+          &quot;media&quot;:&quot;1&quot;,
+          &quot;alta&quot;:&quot;1&quot;,
+          &quot;deleted&quot;:&quot;0&quot; 
+          }
+        ]
+}  </code></pre>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2017 Milk's Rota &ndash;
+            
+            Documentação gerada pelo
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href="../metodos/" title="Métodos disponíveis">
+          <span class="direction">
+            Voltar
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                Métodos disponíveis
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../contato/" title="Contato">
+          <span class="direction">
+            Proximo
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Contato
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = '';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

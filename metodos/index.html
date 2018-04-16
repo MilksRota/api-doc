@@ -1,0 +1,3821 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Métodos disponíveis - Milk's Rota - API de Integração</title>
+      
+      
+      
+        <link rel="canonical" href="http://www.milksrota.com.br/metodos/">
+      
+      
+        <meta name="author" content="Otávio Fernandes">
+      
+    
+    <meta property="og:url" content="http://www.milksrota.com.br/metodos/">
+    <meta property="og:title" content="Milk's Rota - API de Integração">
+    <meta property="og:image" content="http://www.milksrota.com.br/metodos//../images/logo-300x82.png">
+    <meta name="apple-mobile-web-app-title" content="Milk's Rota - API de Integração">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="../images/logo-300x82.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="../assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('../assets/fonts/icon.eot?52m981');
+      	src: url('../assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('../assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('../assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('../assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="../assets/stylesheets/application-b64b728552.css">
+    
+      <link rel="stylesheet" href="../assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="../extra.css">
+    
+    <script src="../assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        Métodos disponíveis
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/oaugustus" title="@oaugustus on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Procurar" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Procurar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="">
+          <img src="../images/logo-300x82.png" style="width: 200px;">
+        </div>
+        <div style="text-align: right;">Versão 1.2</div>
+      
+      <!--<div class="name">
+        <strong>Milk's Rota - API de Integração Versão 1.2</strong>
+        
+      </div>-->
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="" title="API de integração" href="..">
+      API de integração
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="current" title="Métodos disponíveis" href="./">
+      Métodos disponíveis
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Inserir e Alterar" href="#inserir-e-alterar">
+                Inserir e Alterar
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar Analises" href="#apagar-analises">
+                Apagar Analises
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar dados da conta" href="#apagar-dados-da-conta">
+                Apagar dados da conta
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar Extrato" href="#apagar-extrato">
+                Apagar Extrato
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar Grupos de Rotas" href="#apagar-grupos-de-rotas">
+                Apagar Grupos de Rotas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar Itinerário" href="#apagar-itinerario">
+                Apagar Itinerário
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar Tags NFC" href="#apagar-tags-nfc">
+                Apagar Tags NFC
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Apagar Produtores Vinculados" href="#apagar-produtores-vinculados">
+                Apagar Produtores Vinculados
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Coletas" href="#ler-coletas">
+                Ler Coletas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Coletor (Agentes de Coleta / Motoristas)" href="#ler-coletor-agentes-de-coleta-motoristas">
+                Ler Coletor (Agentes de Coleta / Motoristas)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Distribuição (Tanques Coletivos)" href="#ler-distribuicao-tanques-coletivos">
+                Ler Distribuição (Tanques Coletivos)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Descargas" href="#ler-descargas">
+                Ler Descargas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Fazendas" href="#ler-fazendas">
+                Ler Fazendas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Grupos de Rotas" href="#ler-grupos-de-rotas">
+                Ler Grupos de Rotas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Itinerários" href="#ler-itinerarios">
+                Ler Itinerários
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Linhas" href="#ler-linhas">
+                Ler Linhas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Motivos Cancelamento (Justificativas)" href="#ler-motivos-cancelamento-justificativas">
+                Ler Motivos Cancelamento (Justificativas)
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Ocorrências" href="#ler-ocorrencias">
+                Ler Ocorrências
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Produtores" href="#ler-produtores">
+                Ler Produtores
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Resumo das viagens" href="#ler-resumo-das-viagens">
+                Ler Resumo das viagens
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Rotas" href="#ler-rotas">
+                Ler Rotas
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Seguidores de Rota" href="#ler-seguidores-de-rota">
+                Ler Seguidores de Rota
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Tags NFC" href="#ler-tags-nfc">
+                Ler Tags NFC
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Tanques" href="#ler-tanques">
+                Ler Tanques
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Tecnicos" href="#ler-tecnicos">
+                Ler Tecnicos
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Veiculo" href="#ler-veiculo">
+                Ler Veiculo
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Viagem" href="#ler-viagem">
+                Ler Viagem
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Ler Vinculados" href="#ler-vinculados">
+                Ler Vinculados
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Anexos" href="../Anexos/">
+      Anexos
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Contato" href="../contato/">
+      Contato
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">Autor</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/oaugustus" target="_blank" title="@oaugustus on GitHub">
+                  @oaugustus no GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="metodos-disponiveis">Métodos disponíveis<a class="headerlink" href="#metodos-disponiveis" title="Permanent link">#</a></h1>
+<p>Os métodos abaixo estão disponíveis para chamada externa da API.</p>
+<hr />
+<h2 id="inserir-e-alterar"><strong> Inserir e Alterar </strong><a class="headerlink" href="#inserir-e-alterar" title="Permanent link">#</a></h2>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Assinatura</th>
+<th>parametros</th>
+<th>função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="../anexos/#tbgruporotas">writeGrupoRota</a></td>
+<td>conta_id</td>
+<td>CRUD tabela de Grupo de Rotas</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbrotas">writeRota</a></td>
+<td>conta_id</td>
+<td>CRUD tabela de Rotas</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tblinhas">writeLinha</a></td>
+<td>conta_id</td>
+<td>CRUD tabela de Linhas</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbcoletores">writeColetor</a></td>
+<td>conta_id</td>
+<td>CRUD tabela coletores/motoristas</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbprodutores">writeProdutor</a></td>
+<td>conta_id</td>
+<td>CRUD tabela produtores</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbfazendas">writeFazenda</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Fazendas</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbveiculos">writeVeiculo</a></td>
+<td>conta_id</td>
+<td>CRUD tabela veículos transportadores</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbtanques">writeTanque</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tanques de armazenamento</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbextratos">writeExtrato</a></td>
+<td>conta_id</td>
+<td>CRUD tabela extratos de coletas dos produtores</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbitinerarios">writeItinerario</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Itinerarios e ordem de coleta</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbtecnicos">writeTecnico</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tecnicos de plataforma e seguidores de rota</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbtags">writeTag</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tags NFC</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbanalises">writeAnalise</a></td>
+<td>conta_id</td>
+<td>CRUD tabela analise de qualidade dos produtos</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbmotivos">writeMotivo</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Motivos de Cancelamentos de coletas</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbvinculados">writeVinculado</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tanques Comunitário ou Coletivo</td>
+</tr>
+<tr>
+<td><a href="../anexos/#tbseguidores">writeSeguidor</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Seguidores de Rota</td>
+</tr>
+</tbody>
+</table>
+<h2 id="apagar-analises">Apagar Analises<a class="headerlink" href="#apagar-analises" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de análise de uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearAlise</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearAnalise</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno">Retorno<a class="headerlink" href="#retorno" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apagar-dados-da-conta">Apagar dados da conta<a class="headerlink" href="#apagar-dados-da-conta" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de uma conta, mas não exclui o registro da conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearConta</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearConta</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_1">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_1" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>doc</td>
+<td>Documento CNPJ vinculado ao registro da conta</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_1">Retorno<a class="headerlink" href="#retorno_1" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apagar-extrato">Apagar Extrato<a class="headerlink" href="#apagar-extrato" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de extrato de uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearExtrato</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearExtrato</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_2">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_2" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_2">Retorno<a class="headerlink" href="#retorno_2" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apagar-grupos-de-rotas">Apagar Grupos de Rotas<a class="headerlink" href="#apagar-grupos-de-rotas" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados os grupos de rota vinculados a uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearGrupoRota</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearGrupoRota</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_3">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_3" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_3">Retorno<a class="headerlink" href="#retorno_3" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apagar-itinerario">Apagar Itinerário<a class="headerlink" href="#apagar-itinerario" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de itinerários vinculados a uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearItinerario</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearItinerario</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_4">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_4" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_4">Retorno<a class="headerlink" href="#retorno_4" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apagar-tags-nfc">Apagar Tags NFC<a class="headerlink" href="#apagar-tags-nfc" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de tags NFC vinculadas a uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearTag</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearTag</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_5">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_5" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_5">Retorno<a class="headerlink" href="#retorno_5" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="apagar-produtores-vinculados">Apagar Produtores Vinculados<a class="headerlink" href="#apagar-produtores-vinculados" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de tanques vinculados de uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearVinculado</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/clearVinculado</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_6">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_6" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_6">Retorno<a class="headerlink" href="#retorno_6" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ler-coletas">Ler Coletas<a class="headerlink" href="#ler-coletas" title="Permanent link">#</a></h2>
+<p>Recupera todos os registros de coletas realizadas em um período, vinculadas a uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readColeta</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readColeta</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_7">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_7" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+<tr>
+<td>comunitario</td>
+<td>1 =&gt; Se deverão ser listadas apenas os registros principais da coleta em tanque comunitários<br> 0 =&gt; Se irá listar apenas coletas comuns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_7">Retorno<a class="headerlink" href="#retorno_7" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros da coleta</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-da-coleta">Estrutura do Registro da coleta<a class="headerlink" href="#estrutura-do-registro-da-coleta" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro da coleta na API</td>
+</tr>
+<tr>
+<td>parada_id</td>
+<td>Identificação única do registro de visita na API</td>
+</tr>
+<tr>
+<td>coletor_id</td>
+<td>Identificação Única do agente de coleta na API</td>
+</tr>
+<tr>
+<td>produtor_id</td>
+<td>Identificação Única do produtor na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação Única da conta na API</td>
+</tr>
+<tr>
+<td>quantidade</td>
+<td>Volume da coleta</td>
+</tr>
+<tr>
+<td>dt_coleta</td>
+<td>Data de realização da coleta no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>coletada</td>
+<td>1 =&gt; Coleta realizada<br> 0 =&gt; Coleta não realizada</td>
+</tr>
+<tr>
+<td>alizarol</td>
+<td>1 =&gt; Passou no exame de alizarol<br> 0 =&gt; Não passou no exame de alizarol</td>
+</tr>
+<tr>
+<td>tipo_alizarol</td>
+<td>Tipo do alizarol utilizado no exame</td>
+</tr>
+<tr>
+<td>temperatura</td>
+<td>Temperatura do tanque resfriador no momento da coleta</td>
+</tr>
+<tr>
+<td>dt_edicao</td>
+<td>Se o registro foi editado pelo agente de coleta, é data da edição no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>regua</td>
+<td>Medida da régua aferida pelo agente de coleta</td>
+</tr>
+<tr>
+<td>amostra</td>
+<td>Número da amostra utilizada</td>
+</tr>
+<tr>
+<td>contraprova</td>
+<td>Número do lacre da contra-prova da amostra</td>
+</tr>
+<tr>
+<td>comunitaria</td>
+<td>1 =&gt; Se o registro representa a coleta principal de um tanque comunitário<br> 0 =&gt; Coleta comum</td>
+</tr>
+<tr>
+<td>vinculada</td>
+<td>0 =&gt; A coleta não é vinculada a um tanque comunitário <br> 1 =&gt; A coleta não é vinculada a um tanque comunitário</td>
+</tr>
+<tr>
+<td>diferenca</td>
+<td>Valor da diferença entre o volume informado pelo tanque comunitário e o valor aferido</td>
+</tr>
+<tr>
+<td>distribuida</td>
+<td>Se o registro da coleta comunitária já foi distribuído</td>
+</tr>
+<tr>
+<td>informado</td>
+<td>Volume informado no tanque comunitário</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Coordenada geográfica do local de realização da coleta</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Cooredenada geográfica do local de realização da coleta</td>
+</tr>
+<tr>
+<td>exame_visual</td>
+<td>1 =&gt; Característico para exame visual<br> 0 =&gt; Não característico para exame visual</td>
+</tr>
+<tr>
+<td>tanque</td>
+<td>Código de identificação do tanque no ERP</td>
+</tr>
+<tr>
+<td>fazenda</td>
+<td>Código de identificação da fazenda no ERP</td>
+</tr>
+<tr>
+<td>viagem_id</td>
+<td>Identificação Única da viagem na API</td>
+</tr>
+<tr>
+<td>coletor</td>
+<td>Código de identificação do agente de coleta no ERP</td>
+</tr>
+<tr>
+<td>produtor</td>
+<td>Código de identificação do produtor no ERP</td>
+</tr>
+<tr>
+<td>boca</td>
+<td>Compartimentos de armazenamento do leite no veículo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-coletor-agentes-de-coleta-motoristas">Ler Coletor (Agentes de Coleta / Motoristas)<a class="headerlink" href="#ler-coletor-agentes-de-coleta-motoristas" title="Permanent link">#</a></h2>
+<p>recupera os registros dos agentes de coleta</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readColetor</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readColetor</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_8">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_8" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_8">Retorno<a class="headerlink" href="#retorno_8" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos agentes de coleta</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-agente-de-coleta">Estrutura do Registro de Agente de Coleta<a class="headerlink" href="#estrutura-do-registro-de-agente-de-coleta" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro do agente na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data de criação do registro na base de dados da API</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do agente de coleta / Motorista</td>
+</tr>
+<tr>
+<td>rg</td>
+<td>Número da Identidade / Documento de Identificação do agente de coleta</td>
+</tr>
+<tr>
+<td>cpf</td>
+<td>Número do C.P.F. do agente de coleta</td>
+</tr>
+<tr>
+<td>cnh</td>
+<td>Número da Carteira Nacional de Habilitação do agente de coleta</td>
+</tr>
+<tr>
+<td>dt_create</td>
+<td>Data da última atualização do registro na base da API, no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_deleted</td>
+<td>Data da exclusão lógica do registro na base da API, no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Excluído<br> 0 =&gt; Registro ativo</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de Identificação do agente de coleta no ERP</td>
+</tr>
+<tr>
+<td>avatar</td>
+<td>Imagem no formato BASE64 (Foto do agente de coleta)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-distribuicao-tanques-coletivos">Ler Distribuição (Tanques Coletivos)<a class="headerlink" href="#ler-distribuicao-tanques-coletivos" title="Permanent link">#</a></h2>
+<p>recupera os registros de distribuição de volumes para cada participante de tanques coletivos/comunitários em um período</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readColetaComunitaria</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readColetaComunitaria</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_9">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_9" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+<tr>
+<td>comunitario</td>
+<td>1 =&gt; Se deverão ser listadas apenas os registros principais da coleta em tanque comunitários<br> 0 =&gt; Se irá listar apenas coletas comuns</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_9">Retorno<a class="headerlink" href="#retorno_9" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros da distribuição</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-distribuicao-das-coletas">Estrutura do Registro de distribuição das coletas<a class="headerlink" href="#estrutura-do-registro-de-distribuicao-das-coletas" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro da coleta na API</td>
+</tr>
+<tr>
+<td>parada_id</td>
+<td>Identificação única do registro de visita na API</td>
+</tr>
+<tr>
+<td>coletor_id</td>
+<td>Identificação Única do agente de coleta na API</td>
+</tr>
+<tr>
+<td>produtor_id</td>
+<td>Identificação Única do produtor na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação Única da conta na API</td>
+</tr>
+<tr>
+<td>quantidade</td>
+<td>Volume da coleta</td>
+</tr>
+<tr>
+<td>dt_coleta</td>
+<td>Data de realização da coleta no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>coletada</td>
+<td>1 =&gt; Coleta realizada<br> 0 =&gt; Coleta não realizada</td>
+</tr>
+<tr>
+<td>alizarol</td>
+<td>1 =&gt; Passou no exame de alizarol<br> 0 =&gt; Não passou no exame de alizarol</td>
+</tr>
+<tr>
+<td>tipo_alizarol</td>
+<td>Tipo do alizarol utilizado no exame</td>
+</tr>
+<tr>
+<td>temperatura</td>
+<td>Temperatura do tanque resfriador no momento da coleta</td>
+</tr>
+<tr>
+<td>dt_edicao</td>
+<td>Se o registro foi editado pelo agente de coleta, é data da edição no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>regua</td>
+<td>Medida da régua aferida pelo agente de coleta</td>
+</tr>
+<tr>
+<td>amostra</td>
+<td>Número da amostra utilizada</td>
+</tr>
+<tr>
+<td>contraprova</td>
+<td>Número do lacre da contra-prova da amostra</td>
+</tr>
+<tr>
+<td>comunitaria</td>
+<td>1 =&gt; Se o registro representa a coleta principal de um tanque comunitário<br> 0 =&gt; Coleta comum</td>
+</tr>
+<tr>
+<td>vinculada</td>
+<td>0 =&gt; A coleta não é vinculada a um tanque comunitário <br> 1 =&gt; A coleta não é vinculada a um tanque comunitário</td>
+</tr>
+<tr>
+<td>diferenca</td>
+<td>Valor da diferença entre o volume informado pelo tanque comunitário e o valor aferido</td>
+</tr>
+<tr>
+<td>distribuida</td>
+<td>Se o registro da coleta comunitária já foi distribuído</td>
+</tr>
+<tr>
+<td>informado</td>
+<td>Volume informado no tanque comunitário</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Coordenada geográfica do local de realização da coleta</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Cooredenada geográfica do local de realização da coleta</td>
+</tr>
+<tr>
+<td>exame_visual</td>
+<td>1 =&gt; Característico para exame visual<br> 0 =&gt; Não característico para exame visual</td>
+</tr>
+<tr>
+<td>tanque</td>
+<td>Código de identificação do tanque no ERP</td>
+</tr>
+<tr>
+<td>fazenda</td>
+<td>Código de identificação da fazenda no ERP</td>
+</tr>
+<tr>
+<td>viagem_id</td>
+<td>Identificação Única da viagem na API</td>
+</tr>
+<tr>
+<td>coletor</td>
+<td>Código de identificação do agente de coleta no ERP</td>
+</tr>
+<tr>
+<td>produtor</td>
+<td>Código de identificação do produtor no ERP</td>
+</tr>
+<tr>
+<td>boca</td>
+<td>Compartimentos de armazenamento do leite no veículo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-descargas">Ler Descargas<a class="headerlink" href="#ler-descargas" title="Permanent link">#</a></h2>
+<p>recupera os registros das descargas e volumes armazenados nos balões e silos da plataforma, ao final das viagens</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readDescarga</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readDescarga</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_10">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_10" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_10">Retorno<a class="headerlink" href="#retorno_10" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros da descarga</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-descargas-e-armazenamento">Estrutura do Registro de descargas e armazenamento<a class="headerlink" href="#estrutura-do-registro-de-descargas-e-armazenamento" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>viagem_id</td>
+<td>Identificação única da viagem na API</td>
+</tr>
+<tr>
+<td>tanque_id</td>
+<td>Identificação Única do tanque, balão ou Silo na base de dados da API</td>
+</tr>
+<tr>
+<td>coletor_id</td>
+<td>Identificação Única do agente de coleta / Motorista na base de dados da API</td>
+</tr>
+<tr>
+<td>produtor_id</td>
+<td>Identificação Única do produtor na base de dados da API (Responsável por um cancelamento de armazenamento)</td>
+</tr>
+<tr>
+<td>balao_id</td>
+<td>Identificação Única do balão - Compartimento de Plataforma na API</td>
+</tr>
+<tr>
+<td>pesagem_inicial_id</td>
+<td>Identificação Única do registro de pesagem inicial do veículo, quando tipo de descarga for por pesagem</td>
+</tr>
+<tr>
+<td>pesagem_final_id</td>
+<td>Identificação Única do registro de pesagem final do veículo, quando tipo de descarga for por pesagem</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação Única do registro da conta na API</td>
+</tr>
+<tr>
+<td>qtd_coletado</td>
+<td>Volume em litros anotado nos registros de coleta pelo agente de coleta</td>
+</tr>
+<tr>
+<td>qtd_armazenado</td>
+<td>Volume real aferido e armazenado na plataforma de descarga</td>
+</tr>
+<tr>
+<td>peso_coletado</td>
+<td>Peso referente á quantidade informada pelo agente de coleta</td>
+</tr>
+<tr>
+<td>peso_armazenado</td>
+<td>Peso referente á quantidade real armazenada na platafora de descarga</td>
+</tr>
+<tr>
+<td>dt_descarga</td>
+<td>Data da descarga, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>origem_cancelamento</td>
+<td>Ator que deu origem ao cancelamento do armazenamento, quando ocorrer (Produtor ou Agente de Coleta)</td>
+</tr>
+<tr>
+<td>motivo_cancelamento</td>
+<td>Motivo do cancelamento do armazenamento (Antibiótico detectado, acidez elevada, etc )</td>
+</tr>
+<tr>
+<td>cancelada</td>
+<td>1 =&gt; Armazenamento não realizado pelo motivo informado<br> 0 =&gt; Armazenamento realizado normalmente</td>
+</tr>
+<tr>
+<td>foto_ticket</td>
+<td>Imagem BASE64 do ticket de descarga ou medidor de vazão com volume aferido e atesto</td>
+</tr>
+<tr>
+<td>tecnico_id</td>
+<td>Identificação Única técnico de plataforma que executou a descarga do volume</td>
+</tr>
+<tr>
+<td>tanque_veiculo</td>
+<td>Identificação Única do compartimento de armazenamento origem do volume no veículo</td>
+</tr>
+<tr>
+<td>balao</td>
+<td>Código do balão, silo ou tanque no ERP</td>
+</tr>
+<tr>
+<td>produtor</td>
+<td>Código do produtor que deu origem a um possível cancelamento de armazenamento de volume</td>
+</tr>
+<tr>
+<td>coletor</td>
+<td>Código do agente de coleta que deu origem a um possível cancelamento</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-fazendas">Ler Fazendas<a class="headerlink" href="#ler-fazendas" title="Permanent link">#</a></h2>
+<p>recupera os registros das fazendas</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readFazenda</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readFazenda</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_11">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_11" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_11">Retorno<a class="headerlink" href="#retorno_11" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das fazendas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-fazendas">Estrutura do Registro de Fazendas<a class="headerlink" href="#estrutura-do-registro-de-fazendas" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>identificação Única do registro na API</td>
+</tr>
+<tr>
+<td>produtor_id</td>
+<td>Identificação Única do produtor na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação Única da conta na API</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Identificação da fazenda no ERP</td>
+</tr>
+<tr>
+<td>producao</td>
+<td>Estimativa de produção</td>
+</tr>
+<tr>
+<td>numero</td>
+<td>Número do endereço da fazenda</td>
+</tr>
+<tr>
+<td>logradouro</td>
+<td>Endereço da fazenda</td>
+</tr>
+<tr>
+<td>bairro</td>
+<td>Bairro onde se localiza a fazenda</td>
+</tr>
+<tr>
+<td>municipio</td>
+<td>Cidade onde se localiza a fazenda</td>
+</tr>
+<tr>
+<td>uf</td>
+<td>Unidade da federação - endereço da fazenda</td>
+</tr>
+<tr>
+<td>cep</td>
+<td>Código de identificação postal da fazenda</td>
+</tr>
+<tr>
+<td>latitiude</td>
+<td>coordenada geofrafica de localização da fazenda</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>coordenada geofrafica de localização da fazenda</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do produtor</td>
+</tr>
+<tr>
+<td>dt_created</td>
+<td>Data de gravação do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_deleted</td>
+<td>Data da exclusão lógica do registro, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+<tr>
+<td>produtor</td>
+<td>Código do produtor no ERP, proprietário da fazenda</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-grupos-de-rotas">Ler Grupos de Rotas<a class="headerlink" href="#ler-grupos-de-rotas" title="Permanent link">#</a></h2>
+<p>recupera os registros de grupos de rotas</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readGrupoRota</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readGrupoRota</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_12">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_12" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_12">Retorno<a class="headerlink" href="#retorno_12" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros do grupo de rotas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-grupo-de-rotas">Estrutura do Registro de Grupo de Rotas<a class="headerlink" href="#estrutura-do-registro-de-grupo-de-rotas" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>identificação Única do registro na API</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do grupo de rotas no ERP</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação Única da conta na API</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Identificação do grupo de rotas no ERP</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-itinerarios">Ler Itinerários<a class="headerlink" href="#ler-itinerarios" title="Permanent link">#</a></h2>
+<p>recupera os registros dos itinerário</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readItinerario</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readItinerario</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_13">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_13" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_13">Retorno<a class="headerlink" href="#retorno_13" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos itinerários</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-itinerario">Estrutura do Registro de itinerario<a class="headerlink" href="#estrutura-do-registro-de-itinerario" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro do agente na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>fazenda_id</td>
+<td>Identificação Única da fazenda na API</td>
+</tr>
+<tr>
+<td>linha_id</td>
+<td>Identificação Única da linha na API</td>
+</tr>
+<tr>
+<td>ordem</td>
+<td>Ordem de coleta no itinerário</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>código de itenficação do registro no ERP</td>
+</tr>
+<tr>
+<td>horario</td>
+<td>Horário previsto de realização da coleta</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na base da API, no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>coleta_seletiva</td>
+<td>1 =&gt; Indica que a coleta é seletiva e o volume será armazenado em um compartimento especial do veículo<br> 0 =&gt; Coleta normal</td>
+</tr>
+<tr>
+<td>fazenda</td>
+<td>Código de Identificação da fazenda no ERP</td>
+</tr>
+<tr>
+<td>linha</td>
+<td>Código de Identificação da linha de coleta no ERP</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-linhas">Ler Linhas<a class="headerlink" href="#ler-linhas" title="Permanent link">#</a></h2>
+<p>recupera os registros das linhas de coleta</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readLinha</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readLinha</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_14">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_14" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_14">Retorno<a class="headerlink" href="#retorno_14" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das linhas de coleta</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-linha">Estrutura do Registro de Linha<a class="headerlink" href="#estrutura-do-registro-de-linha" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro da linha na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>rota_id</td>
+<td>Identificação Única da rota na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na base da API, no formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>código de itenficação da linha no ERP</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome da linha</td>
+</tr>
+<tr>
+<td>distancia</td>
+<td>Distância prevista para deslocamento em km</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-motivos-cancelamento-justificativas">Ler Motivos Cancelamento (Justificativas)<a class="headerlink" href="#ler-motivos-cancelamento-justificativas" title="Permanent link">#</a></h2>
+<p>recupera os registros de Justificativas de cancelamento de coleta</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readMotivo</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readMotivo</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_15">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_15" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_15">Retorno<a class="headerlink" href="#retorno_15" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das justificativas de cancelamento</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-motivos-de-cancelamento">Estrutura do Registro de Motivos de Cancelamento<a class="headerlink" href="#estrutura-do-registro-de-motivos-de-cancelamento" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>código de itenficação do motivo de cancelamento no ERP</td>
+</tr>
+<tr>
+<td>motivo</td>
+<td>Descrição do motivo de cancelamento</td>
+</tr>
+<tr>
+<td>exige_foto</td>
+<td>1 =&gt; Exige que seja feita uma foto para confirmação da justificativa<br> 0 =&gt; Foto não obrigatória</td>
+</tr>
+<tr>
+<td>envia_notificacao</td>
+<td>0 =&gt; Não notifica os seguidores de rota sobre ocorrência<br> 1 =&gt; Notifica seguidores de rota da ocorrência</td>
+</tr>
+<tr>
+<td>gravidade</td>
+<td>A =&gt; Alta<br> M =&gt;Média <br> B =&gt; Baixa</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-ocorrencias">Ler Ocorrências<a class="headerlink" href="#ler-ocorrencias" title="Permanent link">#</a></h2>
+<p>recupera os registros de ocorrências registradas na viagens</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readOcorrencia</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readOcorrencia</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_16">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_16" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_16">Retorno<a class="headerlink" href="#retorno_16" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das ocorrêncas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-ocorrencias">Estrutura do Registro de Ocorrências<a class="headerlink" href="#estrutura-do-registro-de-ocorrencias" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>visita_id</td>
+<td>Identificação única do registro de visita na viagem na API</td>
+</tr>
+<tr>
+<td>dt_ocorrencia</td>
+<td>Data da ocorrência, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>ocorrencia</td>
+<td>Descrição da ocorr6encia</td>
+</tr>
+<tr>
+<td>foto</td>
+<td>Imagem no formato BASE64 da ocorrência</td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>Coordenada geográfica do local da ocorrência</td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Coordenada geográfica do local da ocorrência</td>
+</tr>
+<tr>
+<td>fazenda_id</td>
+<td>Identificação Única da Fazenda na API</td>
+</tr>
+<tr>
+<td>viagem_id</td>
+<td>Identificação única da Viagem na API</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-produtores">Ler Produtores<a class="headerlink" href="#ler-produtores" title="Permanent link">#</a></h2>
+<p>recupera os registros dos produtores</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readProdutor</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readProdutor</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_17">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_17" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_17">Retorno<a class="headerlink" href="#retorno_17" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos Produtores</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-produtor">Estrutura do Registro de Produtor<a class="headerlink" href="#estrutura-do-registro-de-produtor" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de identificação do produtor no ERP</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do Produtor</td>
+</tr>
+<tr>
+<td>numero</td>
+<td>Número do endereço do produtor</td>
+</tr>
+<tr>
+<td>logradouro</td>
+<td>Endereço do Produtor</td>
+</tr>
+<tr>
+<td>cidade</td>
+<td>Cidade do endereço do Produtor</td>
+</tr>
+<tr>
+<td>doc</td>
+<td>Documento de Identificação do Produtor</td>
+</tr>
+<tr>
+<td>uf</td>
+<td>Estado no endereço do Produtor</td>
+</tr>
+<tr>
+<td>cep</td>
+<td>Código de endereçamento postal do produtor</td>
+</tr>
+<tr>
+<td>dt_create</td>
+<td>Data de criação do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_delete</td>
+<td>Data da exclusão lógica do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-resumo-das-viagens">Ler Resumo das viagens<a class="headerlink" href="#ler-resumo-das-viagens" title="Permanent link">#</a></h2>
+<p>recupera os registros de resumo das viagens finalizadas em um período</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readResumoViagem</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readResumoViagem</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_18">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_18" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_18">Retorno<a class="headerlink" href="#retorno_18" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das Rotas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-resumo-de-viagens">Estrutura do Registro de Resumo de Viagens<a class="headerlink" href="#estrutura-do-registro-de-resumo-de-viagens" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>dt_abertura</td>
+<td>Data e Hora de Início da viagem , formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_fechamento</td>
+<td>Data e Hora do Encerramento da viagem na plataforma , formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>km_inicial</td>
+<td>Quilometragem na abertura da viagem</td>
+</tr>
+<tr>
+<td>km_final</td>
+<td>Quilometragem no fechamento da viagem</td>
+</tr>
+<tr>
+<td>km_distancia</td>
+<td>Distância percorrida na viagem</td>
+</tr>
+<tr>
+<td>veiculo_placa</td>
+<td>Placa do veículo utilizado na viagem</td>
+</tr>
+<tr>
+<td>veiculo_codigo</td>
+<td>Código do veículo na Plataforma</td>
+</tr>
+<tr>
+<td>linha_codigo</td>
+<td>Código da principal linha de coleta percorrida na vaigem</td>
+</tr>
+<tr>
+<td>linha_nome</td>
+<td>Nome da linha de coleta da viagem</td>
+</tr>
+<tr>
+<td>rota_codigo</td>
+<td>Código da Rota (agrupamento de linhas) selecionado na viagem</td>
+</tr>
+<tr>
+<td>rota_nome</td>
+<td>Nome da rota selecionada na viagem</td>
+</tr>
+<tr>
+<td>tipo_descarga</td>
+<td>Indicador da forma de controle de descarga na plataforma <br> TP =&gt; Por Taque através do painel de controle<br> TC =&gt; Por Tanque feita pelo próprio agente de coleta <br> PP =&gt; Plataforma Pesagem <br> PC=&gt; Pesagem pelo agente de coleta</td>
+</tr>
+<tr>
+<td>coletor_codigo</td>
+<td>Código do agente de coleta que executou a vaigem (Motorista)</td>
+</tr>
+<tr>
+<td>coletor_codigo</td>
+<td>Nome do agente de coleta que executou a viagem</td>
+</tr>
+<tr>
+<td>tecnico_codigo</td>
+<td>Código do técnico de paltaforma que registrou a descarga da viagem</td>
+</tr>
+<tr>
+<td>tecnico_nome</td>
+<td>Nome do técnico de paltaforma que atuou na descarga da viagem</td>
+</tr>
+<tr>
+<td>coletas_realizadas</td>
+<td>Número de coletas efetivadas na viagem</td>
+</tr>
+<tr>
+<td>coletas_canceladas</td>
+<td>Número de coletas canceladas na viagem</td>
+</tr>
+<tr>
+<td>coletas_pendentes</td>
+<td>Número de coletas planejadas mas não efetivadas ou canceladas na viagem</td>
+</tr>
+<tr>
+<td>volume_coletado</td>
+<td>Volume total informado pelo agente de coleta</td>
+</tr>
+<tr>
+<td>volume_aferido</td>
+<td>Volume total aferido pelo técnico na descarga (volume efetivo armazenado)</td>
+</tr>
+<tr>
+<td>volume_descartado</td>
+<td>Volume total descartado (Motivos diversos - produto não aproveitado - antibiotico, improprio)</td>
+</tr>
+<tr>
+<td>atesto</td>
+<td>Volume total referente a diferença entre o volume informado , volume descartado e volume realmente aferido</td>
+</tr>
+<tr>
+<td>descarregada</td>
+<td>1 =&gt; Dados da descarga forma inseridos para esta viagem<br> 0 =&gt; Dados da descarga ainda não foram inseridos para esta viagem</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-rotas">Ler Rotas<a class="headerlink" href="#ler-rotas" title="Permanent link">#</a></h2>
+<p>recupera os registros de rotas</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readRota</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readRota</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_19">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_19" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_19">Retorno<a class="headerlink" href="#retorno_19" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das Rotas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-rota">Estrutura do Registro de Rota<a class="headerlink" href="#estrutura-do-registro-de-rota" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>grupo_rota_id</td>
+<td>Identificação única do grupo de rotas na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de identificação do produtor no ERP</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome da rota</td>
+</tr>
+<tr>
+<td>tipo_descarga</td>
+<td>TT =&gt; Tanque por Técnio<br>TC =&gt; Tanque pelo Coletor<br>TP =&gt;Tanque pela Plataforma<br>PT =&gt;Pesagem pelo Técnico<br>PC =&gt;Pesagem pelo Coletor<br>PP =&gt;Pesagem pela Plataforma</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-seguidores-de-rota">Ler Seguidores de Rota<a class="headerlink" href="#ler-seguidores-de-rota" title="Permanent link">#</a></h2>
+<p>recupera os registros de Seguidores de rota</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readSeguidor</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readSeguidor</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_20">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_20" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_20">Retorno<a class="headerlink" href="#retorno_20" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos Seguidores de  Rotas</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-seguidor-de-rota">Estrutura do Registro de Seguidor de  Rota<a class="headerlink" href="#estrutura-do-registro-de-seguidor-de-rota" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>alta</td>
+<td>Recebe notificação de graviade Alta <br> 1 =&gt; Sim // 0 =&gt; Não</td>
+</tr>
+<tr>
+<td>media</td>
+<td>Recebe notificação de graviade Média <br> 1 =&gt; Sim // 0 =&gt; Não</td>
+</tr>
+<tr>
+<td>baixa</td>
+<td>Recebe notificação de graviade Baixa <br> 1 =&gt; Sim // 0 =&gt; Não</td>
+</tr>
+<tr>
+<td>grupo_rota_id</td>
+<td>Identificação única do grupo de rotas na API</td>
+</tr>
+<tr>
+<td>tecnico_id</td>
+<td>Identificação Única do técncio seguidor na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Ientificação Única da conta na API</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de identificação do Seguidor de Rota no ERP</td>
+</tr>
+<tr>
+<td>gruporota</td>
+<td>Código de identificação do Grupo de Rota no ERP</td>
+</tr>
+<tr>
+<td>tecnico</td>
+<td>Código de identificação do Técnico no ERP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-tags-nfc">Ler Tags NFC<a class="headerlink" href="#ler-tags-nfc" title="Permanent link">#</a></h2>
+<p>recupera os registros de Tag NFC e seus respectivos vinculos de utilização</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readTag</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readTag</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_21">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_21" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_21">Retorno<a class="headerlink" href="#retorno_21" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros das Tags NFC</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-tag-nfc">Estrutura do Registro de Tag NFC<a class="headerlink" href="#estrutura-do-registro-de-tag-nfc" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Ientificação Única da conta na API</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>F =&gt; Tanque de Fazenda<br>C =&gt;Coletor (Agente Coleta)<br>V =&gt; Veículo<br>L =&gt;Técnico de Plataforma/Laboratório</td>
+</tr>
+<tr>
+<td>tecnico_id</td>
+<td>Identificação Única do técncio seguidor na API</td>
+</tr>
+<tr>
+<td>tag_id</td>
+<td>Identificação Única da Tag vinculada ao ERP e na API</td>
+</tr>
+<tr>
+<td>tanque_id</td>
+<td>Identificação Única do tanque de coleta na API</td>
+</tr>
+<tr>
+<td>coletor_id</td>
+<td>Identificação Única do agente de coleta na API</td>
+</tr>
+<tr>
+<td>veiculo_id</td>
+<td>Identificação Única do veículo na API</td>
+</tr>
+<tr>
+<td>tanque</td>
+<td>Código de identifcação do tanque no ERP</td>
+</tr>
+<tr>
+<td>veiculo</td>
+<td>Código de identificação do veículo no ERP</td>
+</tr>
+<tr>
+<td>coletor</td>
+<td>Código de identificaáco do agente de coleta no ERP</td>
+</tr>
+<tr>
+<td>tecnico</td>
+<td>Código de identificação do técnico de plataforma no ERP</td>
+</tr>
+<tr>
+<td>dt_create</td>
+<td>Data de criação do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-tanques">Ler Tanques<a class="headerlink" href="#ler-tanques" title="Permanent link">#</a></h2>
+<p>recupera os registros de Tanques de armazenamento nos pontos de coleta, veículo e plataforma de descarga</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readTanque</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readTanque</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_22">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_22" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_22">Retorno<a class="headerlink" href="#retorno_22" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos Tanques</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-tanques">Estrutura do Registro de Tanques<a class="headerlink" href="#estrutura-do-registro-de-tanques" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>F =&gt; Tanque de Fazenda<br>V =&gt; Veículo<br>P =&gt;Plataforma (Balões e Silos de Armazenamento)</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Ientificação Única da conta na API</td>
+</tr>
+<tr>
+<td>veiculo_id</td>
+<td>Identificação Única do veículo na API</td>
+</tr>
+<tr>
+<td>fazenda_id</td>
+<td>Identificação Única da fazenda onde se localiza o tanque na API</td>
+</tr>
+<tr>
+<td>dt_create</td>
+<td>Data de criação do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_delete</td>
+<td>Data da exclusão lógica do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+<tr>
+<td>capacidade</td>
+<td>Capacidade total de armazenamento do tanque</td>
+</tr>
+<tr>
+<td>altura</td>
+<td>Medida da altura do tanque em Centímetros</td>
+</tr>
+<tr>
+<td>perimetro</td>
+<td>Medida da circunferéncia do tanque</td>
+</tr>
+<tr>
+<td>volume</td>
+<td>Volume máximo comportado no tanque</td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de identificação do Tanque no ERP</td>
+</tr>
+<tr>
+<td>comunitario</td>
+<td>1 =&gt; Tanque Coletivo ou comunitário<br> 0 =&gt; Tanque individual</td>
+</tr>
+<tr>
+<td>comunitario_lancamento</td>
+<td>DC =&gt; Distribuição feita pelo agente de coleta<br> DP =&gt; Distribuição feita no painel de administração (Plataforma)</td>
+</tr>
+<tr>
+<td>comunitario_diferenca</td>
+<td>P =&gt; Proprietário assume toda diferança<br> D =&gt; Distribui diferença proporcionalmente ao fornecimento para cada participante</td>
+</tr>
+<tr>
+<td>porcentagem</td>
+<td>Percentual de distribição - sem efeito</td>
+</tr>
+<tr>
+<td>comunitario_divisao</td>
+<td>M =&gt; Manual (Agente de Coleta Informa)<br> A =&gt; Automática por percentual</td>
+</tr>
+<tr>
+<td>comunitario_impressao</td>
+<td>D =&gt; Detalhada(Imprime a distribuiçao no ticket de coleta)<br> S =&gt;Simplificada (Não imprime distribuição no ticket de coleta)</td>
+</tr>
+<tr>
+<td>coleta_seletiva</td>
+<td>1 =&gt; indica que a coleta neste tanque deve ser armazenada em compartimento especial no veículo<br> 0 =&gt; Armazenamento normal</td>
+</tr>
+<tr>
+<td>veiculo</td>
+<td>Código de Identificação do veículo no ERP</td>
+</tr>
+<tr>
+<td>fazenda</td>
+<td>Código de Identificação da Fazenda no ERP</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-tecnicos">Ler Tecnicos<a class="headerlink" href="#ler-tecnicos" title="Permanent link">#</a></h2>
+<p>recupera os registros dos técnicos de plataforma, administradores e seguidores de rota</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readTecnico</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readTecnio</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_23">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_23" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_23">Retorno<a class="headerlink" href="#retorno_23" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos Tecnicos</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-tecnico">Estrutura do Registro de Tecnico<a class="headerlink" href="#estrutura-do-registro-de-tecnico" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de identificação do técnico no ERP</td>
+</tr>
+<tr>
+<td>nome</td>
+<td>Nome do Técnico</td>
+</tr>
+<tr>
+<td>rg</td>
+<td>Número do documento de identificação do técnico</td>
+</tr>
+<tr>
+<td>cpf</td>
+<td>Número do C.P.F. do técnico</td>
+</tr>
+<tr>
+<td>email</td>
+<td>endereço eletrônico para recepção da notificações enviadas pela plataforma</td>
+</tr>
+<tr>
+<td>telefone</td>
+<td>Numero completo do telefone celular do técnico para recebimento de notificações SMS</td>
+</tr>
+<tr>
+<td>imei</td>
+<td>Número de IMEI, identificador único do celular do técnico para recebimento de notificações SMS</td>
+</tr>
+<tr>
+<td>senha</td>
+<td>Senha de acesso á plataforma</td>
+</tr>
+<tr>
+<td>dt_create</td>
+<td>Data de criação do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_delete</td>
+<td>Data da exclusão lógica do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-veiculo">Ler Veiculo<a class="headerlink" href="#ler-veiculo" title="Permanent link">#</a></h2>
+<p>recupera os registros dos veículos cadastrados na plataforma.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readVeiculo</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readVeiculo</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_24">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_24" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_24">Retorno<a class="headerlink" href="#retorno_24" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros dos Veículos</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-veiculo">Estrutura do Registro de Veículo<a class="headerlink" href="#estrutura-do-registro-de-veiculo" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>codigo</td>
+<td>Código de identificação do veículo no ERP</td>
+</tr>
+<tr>
+<td>placa</td>
+<td>placa do veículo</td>
+</tr>
+<tr>
+<td>tipo</td>
+<td>V =&gt; Veículo<br> R =&gt; Reboque (Julieta)</td>
+</tr>
+<tr>
+<td>pesobruto</td>
+<td>peso bruto do veículo</td>
+</tr>
+<tr>
+<td>pesoliquido</td>
+<td>Peso líquido do veículo</td>
+</tr>
+<tr>
+<td>capacidade</td>
+<td>Capacidade total de transporte do tanque de leite</td>
+</tr>
+<tr>
+<td>deleted</td>
+<td>1 =&gt; Registro Inativo<br> 0 =&gt; Registro Ativo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-viagem">Ler Viagem<a class="headerlink" href="#ler-viagem" title="Permanent link">#</a></h2>
+<p>recupera os registros das viagens finalizadas em um período.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readViagem</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readViagem</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_25">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_25" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_25">Retorno<a class="headerlink" href="#retorno_25" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros de Viagens</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-viagens">Estrutura do Registro de Viagens<a class="headerlink" href="#estrutura-do-registro-de-viagens" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única do conta na API</td>
+</tr>
+<tr>
+<td>veiculo_id</td>
+<td>Identificação Única do Veículo na API</td>
+</tr>
+<tr>
+<td>Coletor_id</td>
+<td>Identificação Única do Agente de Coleta na API</td>
+</tr>
+<tr>
+<td>linha_id</td>
+<td>Identificação Única da Linha na API</td>
+</tr>
+<tr>
+<td>rota_id</td>
+<td>Identificação Única da Rota  na API</td>
+</tr>
+<tr>
+<td>tecnico_id</td>
+<td>Identificação Única do Técnico na API</td>
+</tr>
+<tr>
+<td>dt_push</td>
+<td>Data da última atualização do registro na API, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_abertura</td>
+<td>Data da abertura da viagem, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_fechamento</td>
+<td>Data do encerramento da viagem , formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_descarga</td>
+<td>Data da descarga na plataforma, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>dt_liberacao</td>
+<td>Data de liberação para descarga, caso viagem travada por algum motivo, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
+</tr>
+<tr>
+<td>km_inicial</td>
+<td>Quilomentragem inicial do veículo ao iniciar a viagem</td>
+</tr>
+<tr>
+<td>km_final</td>
+<td>Quilometragem final do veículo ao chegar na plataforma de descarga</td>
+</tr>
+<tr>
+<td>distancia</td>
+<td>distância percorrida na viagem (diferença entre km_final e km_inicial)</td>
+</tr>
+<tr>
+<td>km_justificativa</td>
+<td>Justificativa de deslocamento maior ou menor que o previsto para a linha de coleta</td>
+</tr>
+<tr>
+<td>liberada</td>
+<td>0 =&gt; Viagem liberada sem intercorrência<br> 1 =&gt; viagem não liberada, requer intervenção do administrador</td>
+</tr>
+<tr>
+<td>coletado</td>
+<td>- sem efeito</td>
+</tr>
+<tr>
+<td>removida</td>
+<td>0 =&gt; viagem Ativa <br> 1 =&gt; viagem removida logicamente - Não listada no painel</td>
+</tr>
+<tr>
+<td>token</td>
+<td>token de identificação da viagem entre a aplicação e o painel - deteção de falha de sincronização</td>
+</tr>
+<tr>
+<td>app_version</td>
+<td>Versão do aplicativo coletor que gerou a viagem</td>
+</tr>
+<tr>
+<td>rota</td>
+<td>Código de identificação da rota no ERP</td>
+</tr>
+<tr>
+<td>veiculo</td>
+<td>Código de Identificação do Veículo no ERP</td>
+</tr>
+<tr>
+<td>linha</td>
+<td>Código de Identificação da Linha no ERP</td>
+</tr>
+<tr>
+<td>coletor</td>
+<td>Código de identificação do agente de coleta (Motorista) no ERP</td>
+</tr>
+<tr>
+<td>comunitario_pendente</td>
+<td>0 =&gt; Distribuição dos tanques coletivos da viagem já resolvidos<br> 1 =&gt; Pendência de distribuição de volume em tanques coletivos</td>
+</tr>
+<tr>
+<td>bocas</td>
+<td>Quantidade de compartimentos no veículo utilizados no trasnporte do produto</td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-vinculados">Ler Vinculados<a class="headerlink" href="#ler-vinculados" title="Permanent link">#</a></h2>
+<p>recupera os registros dos produtores vinculados em tanques coletivos.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readVinculado</td>
+<td><strong>http://app.milksrota.com.br/api/retaguardasync/readVinculado</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_26">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_26" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início do período desejado</td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término do período desejado</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_26">Retorno<a class="headerlink" href="#retorno_26" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros do produtores vinculados</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-produtores-vinculados">Estrutura do Registro de produtores vinculados<a class="headerlink" href="#estrutura-do-registro-de-produtores-vinculados" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+</tr>
+<tr>
+<td>tanque_id</td>
+<td>Identificação única do tanque coletivo na API</td>
+</tr>
+<tr>
+<td>produtor_id</td>
+<td>Identificação única do produtor na API</td>
+</tr>
+<tr>
+<td>porcentagem</td>
+<td>Porcentagem do volume coletado a ser distribuído automaticamente para o produtor em caso de distribuição automática no tanque</td>
+</tr>
+<tr>
+<td>proprietario</td>
+<td>1 =&gt; Administrador ou propríetário do tanque<br> 0 =&gt; Participante comum</td>
+</tr>
+<tr>
+<td>tanque</td>
+<td>Código de Identificação do Tanque no ERP</td>
+</tr>
+<tr>
+<td>produtor</td>
+<td>Código de Identificação do Produtor no ERP</td>
+</tr>
+</tbody>
+</table>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2017 Milk's Rota &ndash;
+            
+            Documentação gerada pelo
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+        <a href=".." title="API de integração">
+          <span class="direction">
+            Voltar
+          </span>
+          <div class="page">
+            <div class="button button-previous" role="button" aria-label="Previous">
+              <i class="icon icon-back"></i>
+            </div>
+            <div class="stretch">
+              <div class="title">
+                API de integração
+              </div>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+    <div class="next">
+      
+        <a href="../Anexos/" title="Anexos">
+          <span class="direction">
+            Proximo
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Anexos
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '..';
+      var repo_id  = '';
+    </script>
+    <script src="../assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>

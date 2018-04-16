@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="no-js ie6"><![endif]-->
+<!--[if IE 7 ]><html class="no-js ie7"><![endif]-->
+<!--[if IE 8 ]><html class="no-js ie8"><![endif]-->
+<!--[if IE 9 ]><html class="no-js ie9"><![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
+    
+      
+        <title>Milk's Rota - API de Integração - Documentação da API para integração com a plataforma Milk's Rota</title>
+      
+      
+        <meta name="description" content="Documentação da API para integração com a plataforma Milk's Rota">
+      
+      
+        <link rel="canonical" href="http://www.milksrota.com.br/">
+      
+      
+        <meta name="author" content="Otávio Fernandes">
+      
+    
+    <meta property="og:url" content="http://www.milksrota.com.br/">
+    <meta property="og:title" content="Milk's Rota - API de Integração">
+    <meta property="og:image" content="http://www.milksrota.com.br//./images/logo-300x82.png">
+    <meta name="apple-mobile-web-app-title" content="Milk's Rota - API de Integração">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+      <link rel="apple-touch-icon" href="./images/logo-300x82.png">
+    
+    
+    <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
+    <link rel="icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
+    <style>
+      @font-face {
+      	font-family: 'Icon';
+      	src: url('./assets/fonts/icon.eot?52m981');
+      	src: url('./assets/fonts/icon.eot?#iefix52m981')
+               format('embedded-opentype'),
+      		   url('./assets/fonts/icon.woff?52m981')
+               format('woff'),
+      		   url('./assets/fonts/icon.ttf?52m981')
+               format('truetype'),
+      		   url('./assets/fonts/icon.svg?52m981#icon')
+               format('svg');
+      	font-weight: normal;
+      	font-style: normal;
+      }
+    </style>
+    <link rel="stylesheet" href="./assets/stylesheets/application-b64b728552.css">
+    
+      <link rel="stylesheet" href="./assets/stylesheets/palettes-05ab2406df.css">
+    
+    
+      
+      
+      
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu:400,700|Ubuntu+Mono">
+      <style>
+        body, input {
+          font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+        }
+        pre, code {
+          font-family: 'Ubuntu Mono', 'Courier New', 'Courier', monospace;
+        }
+      </style>
+    
+    
+      <link rel="stylesheet" href="./extra.css">
+    
+    <script src="./assets/javascripts/modernizr-4ab42b99fd.js"></script>
+    
+  </head>
+  
+  
+  
+  <body class="palette-primary-blue-grey ">
+    
+    <div class="backdrop">
+      <div class="backdrop-paper"></div>
+    </div>
+    <input class="toggle" type="checkbox" id="toggle-drawer">
+    <input class="toggle" type="checkbox" id="toggle-search">
+    <label class="toggle-button overlay" for="toggle-drawer"></label>
+    <header class="header">
+      <nav aria-label="Header">
+  <div class="bar default">
+    <div class="button button-menu" role="button" aria-label="Menu">
+      <label class="toggle-button icon icon-menu" for="toggle-drawer">
+        <span></span>
+      </label>
+    </div>
+    <div class="stretch">
+      <div class="title">
+        
+          <span class="path">
+            
+          </span>
+        
+        Milk's Rota - API de Integração
+      </div>
+    </div>
+    
+    
+      
+      <div class="button button-github" role="button" aria-label="GitHub">
+        <a href="https://github.com/oaugustus" title="@oaugustus on GitHub" target="_blank" class="toggle-button icon icon-github"></a>
+      </div>
+    
+    <div class="button button-search" role="button" aria-label="Search">
+      <label class="toggle-button icon icon-search" title="Procurar" for="toggle-search"></label>
+    </div>
+  </div>
+  <div class="bar search">
+    <div class="button button-close" role="button" aria-label="Close">
+      <label class="toggle-button icon icon-back" for="toggle-search"></label>
+    </div>
+    <div class="stretch">
+      <div class="field">
+        <input class="query" type="text" placeholder="Procurar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck>
+      </div>
+    </div>
+    <div class="button button-reset" role="button" aria-label="Search">
+      <button class="toggle-button icon icon-close" id="reset-search"></button>
+    </div>
+  </div>
+</nav>
+    </header>
+    <main class="main">
+      
+      <div class="drawer">
+        <nav aria-label="Navigation">
+  
+  <a href="/" class="project">
+    <div class="banner">
+      
+        <div class="">
+          <img src="./images/logo-300x82.png" style="width: 200px;">
+        </div>
+        <div style="text-align: right;">Versão 1.2</div>
+      
+      <!--<div class="name">
+        <strong>Milk's Rota - API de Integração Versão 1.2</strong>
+        
+      </div>-->
+    </div>
+  </a>
+  <div class="scrollable">
+    <div class="wrapper">
+      
+      <div class="toc">
+        <ul>
+          
+            
+  <li>
+    <a class="current" title="API de integração" href=".">
+      API de integração
+    </a>
+    
+      
+        
+      
+      
+        <ul>
+          
+            <li class="anchor">
+              <a title="Visão Geral" href="#visao-geral">
+                Visão Geral
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Autenticação" href="#autenticacao">
+                Autenticação
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Exemplo" href="#exemplo">
+                Exemplo
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Modelos de Integração" href="#modelos-de-integracao">
+                Modelos de Integração
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="Carga na base de dados" href="#carga-na-base-de-dados">
+                Carga na base de dados
+              </a>
+            </li>
+          
+        </ul>
+      
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Métodos disponíveis" href="metodos/">
+      Métodos disponíveis
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Anexos" href="Anexos/">
+      Anexos
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Contato" href="contato/">
+      Contato
+    </a>
+    
+  </li>
+
+          
+        </ul>
+        
+          <hr>
+          <span class="section">Autor</span>
+          <ul>
+            
+            
+              
+              <li>
+                <a href="https://github.com/oaugustus" target="_blank" title="@oaugustus on GitHub">
+                  @oaugustus no GitHub
+                </a>
+              </li>
+            
+          </ul>
+        
+      </div>
+    </div>
+  </div>
+</nav>
+      </div>
+      <article class="article">
+        <div class="wrapper">
+          
+          <h1 id="api-de-integracao">API de integração<a class="headerlink" href="#api-de-integracao" title="Permanent link">#</a></h1>
+<h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">#</a></h2>
+<p>Este documento tem por objetivo fornecer uma orientação detalhada das funcionalidades de integração da plataforma de
+gestão do Milk's Rota, para comunicação com outros serviços e sistemas externos.</p>
+<p>Milk's Rota é uma plataforma exclusiva e dedicada, criada para aumentar a produtividade
+    e reduzir custos no processo de coleta e captação de leite de laticínios e cooperativas. 
+    Utilizando as tecnologias web e mobile mais modernas, ela automatiza o processo de coleta 
+    de ponta-a-ponta, simplificando a operação para carreteiros, técnicos e administração. 
+    São fornecidas informações valiosas que facilitam a gestão, tomada de decisões estratégicas e operacionais.</p>
+<p>Para viabilizar a troca de informações entres os mais variados sistemas de gestão do mercado, 
+    foi criada uma A.P.I. de integração que disponibiliza métodos de acesso á base de dados de nosso servidor, 
+    de forma segura e controlada, por meio dos quais a equipe técnica das empresas pode acessar e registrar as 
+    informações no ambiente.</p>
+<p>A comunicação com a <strong>API</strong> se dá através de requisições <strong>POST</strong> do protocolo <strong>HTTP</strong>. Esses métodos precisam ser chamados
+passando os devidos parâmetros e a API irá retornar os resultados no formado <strong>JSON</strong></p>
+<h2 id="autenticacao">Autenticação<a class="headerlink" href="#autenticacao" title="Permanent link">#</a></h2>
+<p>Toda chamada aos métodos da API exige que sejam enviados como parâmetro, além dos parâmetros específicos do método, os
+seguintes parâmetros:</p>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Identificador único da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token da API gerado para a conta</td>
+</tr>
+</tbody>
+</table>
+<p>Para obter essas informações, entre em contato com a equipe de suporte através do email <a href="mailto:suporte@milksrota.com.br">suporte@milksrota.com.br</a></p>
+<h2 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">#</a></h2>
+<h3 id="requisicao">Requisição<a class="headerlink" href="#requisicao" title="Permanent link">#</a></h3>
+<pre class="code"><code class="language-http">POST /api/retaguardasync/writeTag HTTP/1.1
+Host: app.sclrota.com.br
+Content-Type: application/json
+Accept: application/json
+
+{
+    &quot;conta_id&quot;:40001,
+    &quot;data&quot;:[
+        {
+            &quot;codigo&quot;:&quot;00306&quot;,
+            &quot;tipo&quot;:&quot;C&quot;,
+            &quot;tagid&quot;:&quot;323CDE91&quot;,
+            &quot;veiculo&quot;:&quot;&quot;,
+            &quot;tanque&quot;:&quot;&quot;,
+            &quot;coletor&quot;:&quot;00016&quot;,
+            &quot;tecnico&quot;:&quot;&quot;
+        }
+    ]
+}</code></pre>
+
+
+<h3 id="resposta">Resposta<a class="headerlink" href="#resposta" title="Permanent link">#</a></h3>
+<pre class="code"><code class="language-http">HTTP/1.1 200 OK
+Content-Type: application/json
+Content-Length: xxxx
+
+{&quot;success&quot;:true,&quot;message&quot;:&quot;OK&quot;,&quot;data&quot;:[],&quot;monitor.time&quot;:7.0328681469}</code></pre>
+
+
+<h2 id="modelos-de-integracao">Modelos de Integração<a class="headerlink" href="#modelos-de-integracao" title="Permanent link">#</a></h2>
+<p>Estão disponíveis dois modelos de integração entre a plataforma Milk's Rota e os sistemas ERP das empresas contratantes.</p>
+<hr />
+<h3 id="1-troca-de-informacoes-por-arquivos">1 - Troca de Informações por arquivos<a class="headerlink" href="#1-troca-de-informacoes-por-arquivos" title="Permanent link">#</a></h3>
+<hr />
+<p>Previmos a utilização de arquivos tipados no formato texto simples, por meio dos quais as informações podem ser enviadas e recebidas
+  da plataforma. Estes arquivos tem como requisitos básicos a utilização de um caracter separador padrão ("|","-", "/",etc.) entre os atributos e a necessidade de que a "<strong>primeira linha do arquivo contenha o nome do atributo como coluna da tabela</strong>".</p>
+<p>Neste modelo, utilizaremos um utilitário integrador que opera em um servidor na "Nuvem" para fazer o mapeamento das informações e enviá-las ao servidor Milk' Rota.</p>
+<p>obs: Escolha um caracter separador que NÃO faça parte da construção dos nomes das colunas</p>
+<p>Ex: Uma forma válida de enviar as informações de cadastro das linhas de coleta para o integrador pode ser criada desta forma</p>
+<table>
+<thead>
+<tr>
+<th>codigo/</th>
+<th>nome/</th>
+<th>distancia_Km/</th>
+<th align="center">codigo_rota/</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>001/</td>
+<td>Linha Norte/</td>
+<td>100,00/</td>
+<td align="center">0001/</td>
+</tr>
+<tr>
+<td>002/</td>
+<td>Linha Sul/</td>
+<td>132,00/</td>
+<td align="center">0001/</td>
+</tr>
+<tr>
+<td>003/</td>
+<td>Linha Rural/</td>
+<td>245,00/</td>
+<td align="center">0001/</td>
+</tr>
+</tbody>
+</table>
+<p>Importante: Os nomes das colunas que identificam os atributos não podem contem espaços em branco, desta forma uma rejeição seria criada se o nome de uma das colunas fosse descrito assim: (<strong>codido da linha</strong>). </p>
+<p>São permitidos nomes do tipo (codigo-da-linha ou codigo_da_linha), onde não ha inserção de espaços entre as palavras. Acentuação gráfica também deve ser evitada. </p>
+<h3 id="cadastros-basicos-para-operacao">Cadastros básicos para operação<a class="headerlink" href="#cadastros-basicos-para-operacao" title="Permanent link">#</a></h3>
+<p>O coletor Milk' Rota é uma App Mobile que opera nos modos <strong>on line</strong> e <strong>off-line</strong>, com seleção automática, dependendo da disponibilidade de conexão ás redes móveis ou Wi-Fi.</p>
+<p>Ao iniciar ou finalizar uma viagem, o equipamento coletor deve estar conectado a uma rede de transferência de dados para receber um pacote de carga com as informações dos produtores, pontos de coleta, dados dos veículos transportadores, forma de descarga, etc., e também para fazer a sincronização dos dados coletados com o servidor Web ao final do percurso nas linhas.</p>
+<p>Se não houver sinal de dados ao iniciar uma viagem, o coletor não fará o processo de auto-atualização da base de dados, e os registros poderão ser feitos com base na última carga recebida. Será imprescindível que ao finalizar uma linha de coleta, o sistema detecte uma conexão de dados disponível, caso contrário, o servidor web não será atualizado e o conjunto coletor (Celular + impressora) ficará indisponível para abertura de novas viagens, até se faça a conexão e a descarga das informações para o servidor. </p>
+<hr />
+<h2 id="carga-na-base-de-dados">Carga na base de dados<a class="headerlink" href="#carga-na-base-de-dados" title="Permanent link">#</a></h2>
+<hr />
+<p>Este é o conjunto de informações que devem ser extraídas do sistema ERP da empresa contratante e enviados á plataforma SclRota para alimentar os dispositivos coletores móveis:</p>
+<p><strong>Grupos de Rotas</strong>:  Definimos com grupos de rotas, um container que represente o primeiro nível hierárquico de rotas de coleta dentro da organização ou empresa que utiliza a plataforma sclrota.</p>
+<blockquote>
+<p>Ex.: 0001 -  GR_02976205000132 </p>
+<p>Grupo de rotas da empresa "LATICÍNIOS EXEMPLO"  </p>
+</blockquote>
+<p><strong>Rotas</strong>: As rotas de coleta são representações de uma região, identificação de uma filial ou posto de coleta da empresa, e que por sua vez, estão ligadas a um determinado Grupo de Rotas. As rotas de coleta agregam um conjunto de linhas de coleta, que são finalmente os destinos dos veículos coletores.</p>
+<blockquote>
+<p>Ex.: 
+ Grupo_Rota/Rota/Descricao</p>
+<p>0001/R001/Regiao Sul/<br />
+ 0001/R002/Regiao Norte/<br />
+ 0001/R003/Posto Coleta III/
+</p>
+</blockquote>
+<p><strong>Linhas de Coleta</strong>: Entendemos como linhas de coleta o conjunto de propriedades a serem visitas por um mesmo veículo transportador, dentro de uma ordem e horários pré-definidos.</p>
+<p>Um determinado veículo pode se deslocar por mais de uma linha de coleta desde que esta faça parte da mesma Rota de Coleta que foi definida no momento da abertura da viagem, caso contrário, estaria configurado ai um "desvio de rota", que é permitido de acordo com a política da empresa contratante.</p>
+<blockquote>
+<p>Ex.:
+Codigo/Nome_da_Linha/Codigo_da_Rota</p>
+<p>0001/Linha Bananal/R001/ <br />
+ 0002/Linha Fundão/R001/<br />
+ 0003/Linha Areais/R002/<br />
+ 0004/Linha Cristais/R003/  </p>
+</blockquote>
+<p><strong>Veículos e Reboques</strong>: Esta tabela deve expor as informações básicas sobre os veículos de transporte utilizados para realizar as coleta nas linhas, sendo que os atritubtos obrigatórios são apenas o código de identificação do veículo e sua placa. Caso a empresa utilize conjuntos de veículo + reboque, conhecidos como "Romeu e Julieta", o registro deve ser feito para cada parte do conjunto, ou seja, os reboques (Julietas) também precisam ser cadastrados, bem como seus tanques de transporte.</p>
+<blockquote>
+<p>Ex.: <br />
+Codigo_Veiculo/Placa/Tipo  </p>
+<p>V001/XYZ-9999/V/<br />
+ V002/JUL-8989/R/<br />
+ V003/HRR-0001/V/  <br />
+ V004/TTT-0002/V/  </p>
+</blockquote>
+<ul>
+<li>V - Veículos Simples</li>
+<li>R - Reboque  </li>
+</ul>
+<p><strong>Motoristas/Coletores</strong>: Este conjunto de dados deve trazer as informações sobre os motorista e ou pessoas que atuam nas rotas para realizarem os registros de coletas e que irão operar a aplicação mobile.</p>
+<blockquote>
+<p>Ex.: 
+Codigo/Nome/  </p>
+<p>C001/Jose Antonio/ <br />
+C002/Marcos Vinicius/ <br />
+C003/Elias Transportes/ <br />
+C004/Transportes XYZ  </p>
+</blockquote>
+<p><strong>Tecnicos Plataforma/Seguidores de Rota</strong>: Este arquivo deve conter as informações sobre os operadores de plataforma que atuam no momento da descarga dos veículos e também dos seguidores de rota. os Seguidores de rotá são pessoas responsáveis por controlar administrativamente o funcionamento do processo de coleta e que serão notificados por meio de SMS ou E-Mail quando uma ocorrência relevante for registrada pelos motoristas/coletores durante o percurso nas linhas.</p>
+<blockquote>
+<p>Ex.: 
+Codigo/Nome/celular/email/  </p>
+<p>L001/Jose Antonio/31 99999-4949/jose.antonio@sclrota.com.br/     <br />
+L002/Marcos Vinicius/32 99999-8888/marcos.vinicius@sclrota.com.br/       </p>
+</blockquote>
+<p><strong>Motivos de Cancelamento</strong>: Conjunto de justificativas aceitáveis quando uma coleta programada não for realizada. Estes motivos serão utilizados tanto para as coletas simples, quando para as coletas especiais que geralmente são enviadas para análise de qualidade do produto em laboratórios externos à empresa.</p>
+<blockquote>
+<p>Ex.: 
+Codigo/Descricao/aplicacao  </p>
+<p>001/Lama na Estrada/C/ <br />
+002/Porteira Trancada/C/ <br />
+003/Capacidade veículo atingida/C/ <br />
+004/problemas mecanicos no veículo/C/ <br />
+005/Falta de energia ou Tanque Desligado/A/<br />
+006/Abrigo Tanque sem acesso/C/   <br />
+007/Temperatura produto acima do permitido/A   </p>
+</blockquote>
+<p><strong>Produtores</strong>: Dados cadastrais do produtores/fornecedores que mantem relação comercial com a empresa.</p>
+<blockquote>
+<p>Ex.: 
+Codigo_Produtor/Nome/Fone_Conta/Celular/Email/  </p>
+<p>P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@sclrota.com.br/     <br />
+P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@sclrota.com.br/      </p>
+</blockquote>
+<p><strong>obs: O código de identificação do produtor precisar ser reconhecível pelo sistema ERP da empresa contratante,pois os registros das coletas vem marcados com este código no arquivo de integração de retorno.</strong>  </p>
+<p><strong>Fazendas</strong>: Informações básicas das fazendas produtoras.</p>
+<blockquote>
+<p>Ex.: 
+Codigo_Fazenda/Nome/Codigo_Produtor/  </p>
+<p>F001/Fazenda Raio de Sol/001/     <br />
+F002/Fazenda Miramar/002/<br />
+F003/Sitio Araras/001/  </p>
+</blockquote>
+<p><strong>Tanques</strong>: São os registros dos pontos de coleta que precisam ser visitados dentro de uma linha. Consideramos várias situações onde a fazenda produtora possua um ou mais tanques. Devem ser registrados também neste conjunto de dados, as informações dos tanques de transporte dos veículos e reboques, bem como os silos e baloes de armazenamento que são destino do produto no momento da descarga. </p>
+<p>Aconselhameos que o primeiro atributo da linha de dados seja o "Tipo_de_Tanque", que poderá ser carregado com as seguintes informações:</p>
+<table>
+<thead>
+<tr>
+<th align="center">Tipo de Tanque</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">V</td>
+<td>Tanque de Veículo</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td>Ponto de Coleta na Fazenda</td>
+</tr>
+<tr>
+<td align="center">P</td>
+<td>Silo ou Balão de Plataforma</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>Ex.: 
+Tipo_de_Tanque/codigo_tanque/codigo_da_fazenda/codigo_do_veiculo/capacidade/altura/perimetro/volume/
+comunitario/distribuicao/diferenca/impressao/divisao/  </p>
+<p>F/T001/F002/ /1000/ / /1000/<strong>1</strong>/DP/P/S/M/     <br />
+V/T002/  /V001-01/3500/ / /3500/0/DP/P/S/M/<br />
+V/T003/  /V001-02/4000/ / /4500/0/DP/P/S/M/<br />
+V/T004/  /V001-02/3500/ / /3500/0/DP/P/S/M/<br />
+V/T002/  /V001-01/3500/ / /3500/0/DP/P/S/M/<br />
+P/BALAO 01/ / /50000/ / /50000/0/DP/P/S/M/<br />
+P/SILO 01 / / /80000/ / /80000/0/DP/P/S/M/<br />
+P/SILO 02 / / /100000/ / /100000/0/DP/P/S/M/  </p>
+</blockquote>
+<p>Obs.: os tanque do tipo "V" Veículo devem ser informados para cada compartimento do tanque do veículo, se o veículo transportador tiver um tanque com 3 compartimentos, cada um compartimento deve ter um registro com sua capacidade de transporte. O mesmo ocorre para o caso dos reboques, se o veículo for do tipo "R" reboque, ele terá registrados os tanques do veículo simples e também os tanques do reboque que compoe o conjunto de transporte "Romeu e Julieta".    </p>
+<p><strong>TABELA DE DOMÍNIOS PARA OS ATRIBUTOS DOS TANQUES</strong></p>
+<table>
+<thead>
+<tr>
+<th>Atributo</th>
+<th>Domínio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Comunitario</td>
+<td>0 - Tanque individual  /  1 - Tanque Comunitário ou Coletivo</td>
+</tr>
+<tr>
+<td>Distribuicao</td>
+<td>DP - Distribuicao pela Plataforma WEB  / DC - Distribuicao pelo motorista ou coletor</td>
+</tr>
+<tr>
+<td>Diferenca</td>
+<td>P - Diferenças de anotação vão para o proprietário  / D - Distribuição proporcional da diferença por participação</td>
+</tr>
+<tr>
+<td>Impressao</td>
+<td>D - Detalhada - Imprime ticket de coleta para cada participante / S - Simplificada, apenas um ticket geral</td>
+</tr>
+<tr>
+<td>Divisao</td>
+<td>M - Manual, Coletor digita os valores  / A - Automática, Sistema calcula participação por percentual</td>
+</tr>
+</tbody>
+</table>
+<p>Esta tabela de domínios se aplica ao caso de tanques do tipo "F" (Pontos de coleta na fazenda), onde existe a participação de mais de um produtor utilizando o mesmo tanque resfriador no regime comunitário ou coletivo.</p>
+<p><strong>Tanques Coletivos</strong>: Relação de produtores participantes dos tanques comunitários ou coletivos. Os registros desta tabela levam em conta o código do tanque que necessariamente precisar estar registrado na tabela de tanques com o atributo "<strong>comunitario=1</strong>".</p>
+<blockquote>
+<p>Ex.: 
+Codigo_Registro/Codigo_do_Tanque/Codigo_do_Produtor/percentual/responsavel/  </p>
+<p>0001/T001/P002/00/<strong>1</strong>/ <br />
+0002/T001/P005/00/0/<br />
+0003/T001/P006/00/0/    </p>
+</blockquote>
+<p>Nota: Cada tanque coletivo deve conter apenas uma linha com o atributo "<strong>responsável</strong>" marcada com o conteúdo "1"; <br />
+São aceitos "N" registros de participantes para os tanques e o vincúlo acontece pelo código do produtor;<br />
+Caso seja informado o percentual de participação do produtor no tanque para cálculo de distribuição de volumes, O atributo <strong>divisao</strong> do tanque deve ter o conteúdo "<strong>A</strong>" (Automática) e o atributo distribuição deve ter o conteúdo "<strong>DC</strong>" (distribuição pelo coletor), na tabela de registro do tanque.</p>
+<p><strong>Tags NFC</strong>: A paltaforma SclRota faz a identificação de vários atores do processo através da tecnologia NFC (Near Field Comunication). São identificados os motoristas/coletores, veículos, pontos de coleta, reboques e técnicos de plataforma.</p>
+<p>As etiquetas NFC tem um identificador único que precisa ser vinculado ao ator que será identificado. Como não existe gravação ou regravação direta, usaremos o modelo de tabela abaixo para gerar as associações.<br />
+  Reutilização dos identificadores NFC são permitidos naturalmente, basta que o ID da tag NFC seja desvinculado de um ator e vinculado a outro.</p>
+<blockquote>
+<p>Ex.:
+Codigo_Registro/Codigo_Coletor/codigo_tanque/codigo_veiculo/codigo_tecnico/tagid/tipo/  </p>
+<p>0001/C001/ / / /A7890288/C/ <br />
+0002/  /T001/ / /17090188/T/ <br />
+0003/ / /V001/ /234ER288/V/ <br />
+0004/ / /V002//AS1223E1/R/  <br />
+0005/ / //L001/XS1453E1/L/      </p>
+</blockquote>
+<p><strong>Tabela de valores para o atributo "tipo"</strong></p>
+<table>
+<thead>
+<tr>
+<th align="center">Valor</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">V</td>
+<td>Tag de Veículo</td>
+</tr>
+<tr>
+<td align="center">T</td>
+<td>Tag de Tanque (Ponto de coleta)</td>
+</tr>
+<tr>
+<td align="center">C</td>
+<td>Tag de Coletor</td>
+</tr>
+<tr>
+<td align="center">R</td>
+<td>Tag de Reboque</td>
+</tr>
+<tr>
+<td align="center">A</td>
+<td>Tag de amostra</td>
+</tr>
+<tr>
+<td align="center">L</td>
+<td>Tag de Tecnico plataforma e laboratório</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Itinerários</strong>: As Informações constantes deste arquivo definem a lista de propriedades produtoras a serem visitadas em uma viagem, bem como a ordem e horário programados de coletas. Devem ser informados os registros para todas as rotas e linhas que os coletores percorrem durante uma viagem.</p>
+<blockquote>
+<p>Ex.:
+Codigo/Rota/Linha/fazenda/produtor/ordem/horario/    </p>
+<p>0001/R001/001/F0005/P0001/1/07:00  <br />
+0002/R001/001/F0002/P0003/2/07:40  <br />
+0003/R001/001/F0003/P0007/3/08:10  <br />
+0004/R001/001/F0001/P0022/4/09:00    </p>
+</blockquote>
+          <aside class="copyright" role="note">
+            
+              Copyright (c) 2017 Milk's Rota &ndash;
+            
+            Documentação gerada pelo
+            <a href="http://www.mkdocs.org" target="_blank">MkDocs</a>.
+          </aside>
+          
+            <footer class="footer">
+              
+  <nav class="pagination" aria-label="Footer">
+    <div class="previous">
+      
+    </div>
+    <div class="next">
+      
+        <a href="metodos/" title="Métodos disponíveis">
+          <span class="direction">
+            Proximo
+          </span>
+          <div class="page">
+            <div class="stretch">
+              <div class="title">
+                Métodos disponíveis
+              </div>
+            </div>
+            <div class="button button-next" role="button" aria-label="Next">
+              <i class="icon icon-forward"></i>
+            </div>
+          </div>
+        </a>
+      
+    </div>
+  </nav>
+
+            </footer>
+          
+        </div>
+      </article>
+      <div class="results" role="status" aria-live="polite">
+        <div class="scrollable">
+          <div class="wrapper">
+            <div class="meta"></div>
+            <div class="list"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script>
+      var base_url = '.';
+      var repo_id  = '';
+    </script>
+    <script src="./assets/javascripts/application-997097ee0c.js"></script>
+    
+    
+  </body>
+</html>
