@@ -1,0 +1,40 @@
+# Informações do projeto
+site_name: Milk's Rota - API de Integração
+site_description: Documentação da API para integração com a plataforma Milk's Rota
+site_author: Otávio Fernandes
+site_url: http://www.milksrota.com.br/
+extra_css: [extra.css]
+
+
+# Copyright
+copyright: Copyright (c) 2017 Milk's Rota
+
+# Documentação de tema
+theme_dir: material
+
+# Opções
+extra:
+  version: Versão 1.2
+  logo: images/logo-300x82.png
+  i18n:
+    prev: 'Voltar'
+    next: 'Proximo'
+  palette:
+    primary: 'blue-grey'
+  author:
+    github: oaugustus
+
+# Extensões
+markdown_extensions:
+  - codehilite(css_class=code)
+  - admonition
+  - fontawesome_markdown
+  - toc:
+      permalink: '#'
+
+# Árvore de páginas
+pages:
+  - API de integração: 'index.md'
+  - Métodos disponíveis: 'metodos.md'
+  - Anexos: 'Anexos.md'
+  - Contato: 'contato.md'

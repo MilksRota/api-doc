@@ -1,0 +1,15 @@
+.admonition.note {
+	background-color: #78909C !important;
+}
+
+.palette-primary-teal .article h3 {
+    color: #009688;
+}
+
+.palette-primary-teal .article h4 {
+    color: #009688;
+}
+
+.admonition.note a {
+    color: #fff;
+}
