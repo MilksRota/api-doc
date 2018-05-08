@@ -139,10 +139,10 @@
         <div class="">
           <img src="./images/logo-300x82.png" style="width: 200px;">
         </div>
-        <div style="text-align: right;">Versão 1.2</div>
+        <div style="text-align: right;">Versão 1.2.1</div>
       
       <!--<div class="name">
-        <strong>Milk's Rota - API de Integração Versão 1.2</strong>
+        <strong>Milk's Rota - API de Integração Versão 1.2.1</strong>
         
       </div>-->
     </div>
@@ -172,6 +172,12 @@
             </li>
           
             <li class="anchor">
+              <a title="Introdução" href="#introducao">
+                Introdução
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Autenticação" href="#autenticacao">
                 Autenticação
               </a>
@@ -184,14 +190,20 @@
             </li>
           
             <li class="anchor">
-              <a title="Modelos de Integração" href="#modelos-de-integracao">
-                Modelos de Integração
+              <a title="FORMAS DE INTEGRAÇÃO" href="#formas-de-integracao">
+                FORMAS DE INTEGRAÇÃO
               </a>
             </li>
           
             <li class="anchor">
-              <a title="Carga na base de dados" href="#carga-na-base-de-dados">
-                Carga na base de dados
+              <a title="(1) - Troca de Informações por arquivos" href="#1-troca-de-informacoes-por-arquivos">
+                (1) - Troca de Informações por arquivos
+              </a>
+            </li>
+          
+            <li class="anchor">
+              <a title="(2) - Consumo dos métodos do WebService" href="#2-consumo-dos-metodos-do-webservice">
+                (2) - Consumo dos métodos do WebService
               </a>
             </li>
           
@@ -203,17 +215,8 @@
           
             
   <li>
-    <a class="" title="Métodos disponíveis" href="metodos/">
-      Métodos disponíveis
-    </a>
-    
-  </li>
-
-          
-            
-  <li>
-    <a class="" title="Anexos" href="Anexos/">
-      Anexos
+    <a class="" title="Métodos leitura e Exclusão" href="metodos/">
+      Métodos leitura e Exclusão
     </a>
     
   </li>
@@ -223,6 +226,15 @@
   <li>
     <a class="" title="Contato" href="contato/">
       Contato
+    </a>
+    
+  </li>
+
+          
+            
+  <li>
+    <a class="" title="Anexos" href="anexos/">
+      Anexos
     </a>
     
   </li>
@@ -254,9 +266,12 @@
           
           <h1 id="api-de-integracao">API de integração<a class="headerlink" href="#api-de-integracao" title="Permanent link">#</a></h1>
 <h2 id="visao-geral">Visão Geral<a class="headerlink" href="#visao-geral" title="Permanent link">#</a></h2>
-<p>Este documento tem por objetivo fornecer uma orientação detalhada das funcionalidades de integração da plataforma de
+<p>Este documento tem por objetivo fornecer uma documentação detalhada da funcionalidade de integração da plataforma de
 gestão do Milk's Rota, para comunicação com outros serviços e sistemas externos.</p>
-<p>Milk's Rota é uma plataforma exclusiva e dedicada, criada para aumentar a produtividade
+<p>A comunicação com a <strong>API</strong> se dá através de requisições <strong>POST</strong> do protocolo <strong>HTTP</strong>. Esses métodos precisam ser chamados
+passando os devidos parâmetros e a API irá retornar os resultados no formado <strong>JSON</strong></p>
+<h2 id="introducao">Introdução<a class="headerlink" href="#introducao" title="Permanent link">#</a></h2>
+<p>O Milk's Rota é uma plataforma exclusiva e dedicada, criada para aumentar a produtividade
     e reduzir custos no processo de coleta e captação de leite de laticínios e cooperativas. 
     Utilizando as tecnologias web e mobile mais modernas, ela automatiza o processo de coleta 
     de ponta-a-ponta, simplificando a operação para carreteiros, técnicos e administração. 
@@ -265,8 +280,6 @@ gestão do Milk's Rota, para comunicação com outros serviços e sistemas exter
     foi criada uma A.P.I. de integração que disponibiliza métodos de acesso á base de dados de nosso servidor, 
     de forma segura e controlada, por meio dos quais a equipe técnica das empresas pode acessar e registrar as 
     informações no ambiente.</p>
-<p>A comunicação com a <strong>API</strong> se dá através de requisições <strong>POST</strong> do protocolo <strong>HTTP</strong>. Esses métodos precisam ser chamados
-passando os devidos parâmetros e a API irá retornar os resultados no formado <strong>JSON</strong></p>
 <h2 id="autenticacao">Autenticação<a class="headerlink" href="#autenticacao" title="Permanent link">#</a></h2>
 <p>Toda chamada aos métodos da API exige que sejam enviados como parâmetro, além dos parâmetros específicos do método, os
 seguintes parâmetros:</p>
@@ -290,7 +303,7 @@ seguintes parâmetros:</p>
 </table>
 <p>Para obter essas informações, entre em contato com a equipe de suporte através do email <a href="mailto:suporte@milksrota.com.br">suporte@milksrota.com.br</a></p>
 <h2 id="exemplo">Exemplo<a class="headerlink" href="#exemplo" title="Permanent link">#</a></h2>
-<h3 id="requisicao">Requisição<a class="headerlink" href="#requisicao" title="Permanent link">#</a></h3>
+<h4 id="requisicao">Requisição<a class="headerlink" href="#requisicao" title="Permanent link">#</a></h4>
 <pre class="code"><code class="language-http">POST /api/retaguardasync/writeTag HTTP/1.1
 Host: app.sclrota.com.br
 Content-Type: application/json
@@ -312,7 +325,7 @@ Accept: application/json
 }</code></pre>
 
 
-<h3 id="resposta">Resposta<a class="headerlink" href="#resposta" title="Permanent link">#</a></h3>
+<h4 id="resposta">Resposta<a class="headerlink" href="#resposta" title="Permanent link">#</a></h4>
 <pre class="code"><code class="language-http">HTTP/1.1 200 OK
 Content-Type: application/json
 Content-Length: xxxx
@@ -320,14 +333,14 @@ Content-Length: xxxx
 {&quot;success&quot;:true,&quot;message&quot;:&quot;OK&quot;,&quot;data&quot;:[],&quot;monitor.time&quot;:7.0328681469}</code></pre>
 
 
-<h2 id="modelos-de-integracao">Modelos de Integração<a class="headerlink" href="#modelos-de-integracao" title="Permanent link">#</a></h2>
+<h2 id="formas-de-integracao">FORMAS DE INTEGRAÇÃO<a class="headerlink" href="#formas-de-integracao" title="Permanent link">#</a></h2>
+<h3 id="modelos-de-integracao">Modelos de Integração<a class="headerlink" href="#modelos-de-integracao" title="Permanent link">#</a></h3>
 <p>Estão disponíveis dois modelos de integração entre a plataforma Milk's Rota e os sistemas ERP das empresas contratantes.</p>
 <hr />
-<h3 id="1-troca-de-informacoes-por-arquivos">1 - Troca de Informações por arquivos<a class="headerlink" href="#1-troca-de-informacoes-por-arquivos" title="Permanent link">#</a></h3>
-<hr />
+<h2 id="1-troca-de-informacoes-por-arquivos">(1) - Troca de Informações por arquivos<a class="headerlink" href="#1-troca-de-informacoes-por-arquivos" title="Permanent link">#</a></h2>
 <p>Previmos a utilização de arquivos tipados no formato texto simples, por meio dos quais as informações podem ser enviadas e recebidas
   da plataforma. Estes arquivos tem como requisitos básicos a utilização de um caracter separador padrão ("|","-", "/",etc.) entre os atributos e a necessidade de que a "<strong>primeira linha do arquivo contenha o nome do atributo como coluna da tabela</strong>".</p>
-<p>Neste modelo, utilizaremos um utilitário integrador que opera em um servidor na "Nuvem" para fazer o mapeamento das informações e enviá-las ao servidor Milk' Rota.</p>
+<p>Neste modelo, utilizaremos um utilitário integrador que opera no módo "Stand-alone" para fazer o mapeamento das informações, inserir em tabelas temporárias e enviá-las ao servidor Milk's Rota.</p>
 <p>obs: Escolha um caracter separador que NÃO faça parte da construção dos nomes das colunas</p>
 <p>Ex: Uma forma válida de enviar as informações de cadastro das linhas de coleta para o integrador pode ser criada desta forma</p>
 <table>
@@ -363,14 +376,14 @@ Content-Length: xxxx
 <p>Importante: Os nomes das colunas que identificam os atributos não podem contem espaços em branco, desta forma uma rejeição seria criada se o nome de uma das colunas fosse descrito assim: (<strong>codido da linha</strong>). </p>
 <p>São permitidos nomes do tipo (codigo-da-linha ou codigo_da_linha), onde não ha inserção de espaços entre as palavras. Acentuação gráfica também deve ser evitada. </p>
 <h3 id="cadastros-basicos-para-operacao">Cadastros básicos para operação<a class="headerlink" href="#cadastros-basicos-para-operacao" title="Permanent link">#</a></h3>
-<p>O coletor Milk' Rota é uma App Mobile que opera nos modos <strong>on line</strong> e <strong>off-line</strong>, com seleção automática, dependendo da disponibilidade de conexão ás redes móveis ou Wi-Fi.</p>
+<p>O coletor Milk's Rota é uma App Mobile que opera nos modos <strong>on line</strong> e <strong>off-line</strong>, com seleção automática, dependendo da disponibilidade de conexão ás redes móveis ou Wi-Fi.</p>
 <p>Ao iniciar ou finalizar uma viagem, o equipamento coletor deve estar conectado a uma rede de transferência de dados para receber um pacote de carga com as informações dos produtores, pontos de coleta, dados dos veículos transportadores, forma de descarga, etc., e também para fazer a sincronização dos dados coletados com o servidor Web ao final do percurso nas linhas.</p>
 <p>Se não houver sinal de dados ao iniciar uma viagem, o coletor não fará o processo de auto-atualização da base de dados, e os registros poderão ser feitos com base na última carga recebida. Será imprescindível que ao finalizar uma linha de coleta, o sistema detecte uma conexão de dados disponível, caso contrário, o servidor web não será atualizado e o conjunto coletor (Celular + impressora) ficará indisponível para abertura de novas viagens, até se faça a conexão e a descarga das informações para o servidor. </p>
 <hr />
-<h2 id="carga-na-base-de-dados">Carga na base de dados<a class="headerlink" href="#carga-na-base-de-dados" title="Permanent link">#</a></h2>
+<h3 id="carga-na-base-de-dados">Carga na base de dados<a class="headerlink" href="#carga-na-base-de-dados" title="Permanent link">#</a></h3>
 <hr />
-<p>Este é o conjunto de informações que devem ser extraídas do sistema ERP da empresa contratante e enviados á plataforma SclRota para alimentar os dispositivos coletores móveis:</p>
-<p><strong>Grupos de Rotas</strong>:  Definimos com grupos de rotas, um container que represente o primeiro nível hierárquico de rotas de coleta dentro da organização ou empresa que utiliza a plataforma sclrota.</p>
+<p>Este é o conjunto de informações que devem ser extraídas do sistema ERP da empresa contratante e enviados á plataforma Milk's Rota para alimentar os dispositivos coletores móveis:</p>
+<p><strong>Grupos de Rotas</strong>:  Definimos com grupos de rotas, um container que represente o primeiro nível hierárquico de rotas de coleta dentro da organização ou empresa que utiliza a plataforma Milk's Rota.</p>
 <blockquote>
 <p>Ex.: 0001 -  GR_02976205000132 </p>
 <p>Grupo de rotas da empresa "LATICÍNIOS EXEMPLO"  </p>
@@ -420,8 +433,8 @@ C004/Transportes XYZ  </p>
 <blockquote>
 <p>Ex.: 
 Codigo/Nome/celular/email/  </p>
-<p>L001/Jose Antonio/31 99999-4949/jose.antonio@sclrota.com.br/     <br />
-L002/Marcos Vinicius/32 99999-8888/marcos.vinicius@sclrota.com.br/       </p>
+<p>L001/Jose Antonio/31 99999-4949/jose.antonio@Milk's Rota.com.br/     <br />
+L002/Marcos Vinicius/32 99999-8888/marcos.vinicius@Milk's Rota.com.br/       </p>
 </blockquote>
 <p><strong>Motivos de Cancelamento</strong>: Conjunto de justificativas aceitáveis quando uma coleta programada não for realizada. Estes motivos serão utilizados tanto para as coletas simples, quando para as coletas especiais que geralmente são enviadas para análise de qualidade do produto em laboratórios externos à empresa.</p>
 <blockquote>
@@ -438,29 +451,29 @@ Codigo/Descricao/aplicacao  </p>
 <p><strong>Produtores</strong>: Dados cadastrais do produtores/fornecedores que mantem relação comercial com a empresa.</p>
 <blockquote>
 <p>Ex.: 
-Codigo_Produtor/Nome/Fone_Conta/Celular/Email/Tipo/documento/IE  </p>
-<p>P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@sclrota.com.br/F/59613656677/ /     <br />
-P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@sclrota.com.br/F/23456789122/ /</p>
+Codigo_Produtor/Nome/Fone_Conta/Celular/Email/doc/ie/tipo  </p>
+<p>P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@Milk's Rota.com.br/59613654600//F     <br />
+P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@Milk's Rota.com.br/23467892344//F      </p>
 </blockquote>
+<p><strong>obs: O código de identificação do produtor precisar ser reconhecível pelo sistema ERP da empresa contratante,pois os registros das coletas vem marcados com este código no arquivo de integração de retorno.</strong></p>
 <table>
 <thead>
 <tr>
-<th align="center">Tipo Produtor</th>
+<th align="center">Tipo</th>
 <th>Descricao</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td align="center">F</td>
+<td>Pessoa Fíisica</td>
+</tr>
+<tr>
 <td align="center">J</td>
 <td>Pessoa Jurídica</td>
 </tr>
-<tr>
-<td align="center">F</td>
-<td>Pessoa Física</td>
-</tr>
 </tbody>
 </table>
-<p><strong>obs: O código de identificação do produtor precisar ser reconhecível pelo sistema ERP da empresa contratante,pois os registros das coletas vem marcados com este código no arquivo de integração de retorno.</strong>  </p>
 <p><strong>Fazendas</strong>: Informações básicas das fazendas produtoras.</p>
 <blockquote>
 <p>Ex.: 
@@ -550,7 +563,7 @@ Codigo_Registro/Codigo_do_Tanque/Codigo_do_Produtor/percentual/responsavel/  </p
 <p>Nota: Cada tanque coletivo deve conter apenas uma linha com o atributo "<strong>responsável</strong>" marcada com o conteúdo "1"; <br />
 São aceitos "N" registros de participantes para os tanques e o vincúlo acontece pelo código do produtor;<br />
 Caso seja informado o percentual de participação do produtor no tanque para cálculo de distribuição de volumes, O atributo <strong>divisao</strong> do tanque deve ter o conteúdo "<strong>A</strong>" (Automática) e o atributo distribuição deve ter o conteúdo "<strong>DC</strong>" (distribuição pelo coletor), na tabela de registro do tanque.</p>
-<p><strong>Tags NFC</strong>: A paltaforma SclRota faz a identificação de vários atores do processo através da tecnologia NFC (Near Field Comunication). São identificados os motoristas/coletores, veículos, pontos de coleta, reboques e técnicos de plataforma.</p>
+<p><strong>Tags NFC</strong>: A paltaforma Milk's Rota faz a identificação de vários atores do processo através da tecnologia NFC (Near Field Comunication). São identificados os motoristas/coletores, veículos, pontos de coleta, reboques e técnicos de plataforma.</p>
 <p>As etiquetas NFC tem um identificador único que precisa ser vinculado ao ator que será identificado. Como não existe gravação ou regravação direta, usaremos o modelo de tabela abaixo para gerar as associações.<br />
   Reutilização dos identificadores NFC são permitidos naturalmente, basta que o ID da tag NFC seja desvinculado de um ator e vinculado a outro.</p>
 <blockquote>
@@ -606,6 +619,112 @@ Codigo/Rota/Linha/fazenda/produtor/ordem/horario/    </p>
 0003/R001/001/F0003/P0007/3/08:10  <br />
 0004/R001/001/F0001/P0022/4/09:00    </p>
 </blockquote>
+<hr />
+<h2 id="2-consumo-dos-metodos-do-webservice">(2) - Consumo dos métodos do WebService<a class="headerlink" href="#2-consumo-dos-metodos-do-webservice" title="Permanent link">#</a></h2>
+<p>A plataforma Milk's Rota disponibiliza, por meio de um serviço Web, vários métodos de leitura e gravação na base de dados. A forma de comunicação entre as partes e feita por meio de trocas de mensagens no formato JSON (JavaScript Object Notation) em operações POST.</p>
+<p>A seguir listaremos a URI Base de comunicação e as assinaturas dos métodos de leitura e gravação.</p>
+<p><strong>Endereço Base do Servidor</strong>  </p>
+<ul>
+<li>
+<p><strong>http://app.sclrota.com.br/api/retaguardasync (AMBIENTE DE PRODUÇÃO)</strong></p>
+</li>
+<li>
+<p><strong>http://teste.sclrota.com.br/api/retaguardasync (AMBIENTE DE HOMOLOGAÇÃO E TESTES)</strong></p>
+</li>
+</ul>
+<p>As credenciais de acesso são fornecidas na instalação da plataforma. Nas operações com o servidor será necessário incluir no arquivo JSON a chave de identificação da conta além dos parâmetros requeridos para cada método.</p>
+<h3 id="metodos-inclusaoalteracao-disponiveis">Métodos Inclusão/Alteração disponíveis<a class="headerlink" href="#metodos-inclusaoalteracao-disponiveis" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Assinatura</th>
+<th>parametros</th>
+<th>função</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="./anexos/#tbgruporotas">writeGrupoRota</a></td>
+<td>conta_id</td>
+<td>CRUD tabela de Grupo de Rotas</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbrotas">writeRota</a></td>
+<td>conta_id</td>
+<td>CRUD tabela de Rotas</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tblinhas">writeLinha</a></td>
+<td>conta_id</td>
+<td>CRUD tabela de Linhas</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbcoletores">writeColetor</a></td>
+<td>conta_id</td>
+<td>CRUD tabela coletores/motoristas</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbprodutores">writeProdutor</a></td>
+<td>conta_id</td>
+<td>CRUD tabela produtores</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbfazendas">writeFazenda</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Fazendas</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbveiculos">writeVeiculo</a></td>
+<td>conta_id</td>
+<td>CRUD tabela veículos transportadores</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbtanques">writeTanque</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tanques de armazenamento</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbextratos">writeExtrato</a></td>
+<td>conta_id</td>
+<td>CRUD tabela extratos de coletas dos produtores</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbitinerarios">writeItinerario</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Itinerarios e ordem de coleta</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbtecnicos">writeTecnico</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tecnicos de plataforma e seguidores de rota</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbtags">writeTag</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tags NFC</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbanalises">writeAnalise</a></td>
+<td>conta_id</td>
+<td>CRUD tabela analise de qualidade dos produtos</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbmotivos">writeMotivo</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Motivos de Cancelamentos de coletas</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbvinculados">writeVinculado</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Tanques Comunitário ou Coletivo</td>
+</tr>
+<tr>
+<td><a href="./anexos/#tbseguidores">writeSeguidor</a></td>
+<td>conta_id</td>
+<td>CRUD tabela Seguidores de Rota</td>
+</tr>
+</tbody>
+</table>
           <aside class="copyright" role="note">
             
               Copyright (c) 2017 Milk's Rota &ndash;
@@ -622,14 +741,14 @@ Codigo/Rota/Linha/fazenda/produtor/ordem/horario/    </p>
     </div>
     <div class="next">
       
-        <a href="metodos/" title="Métodos disponíveis">
+        <a href="metodos/" title="Métodos leitura e Exclusão">
           <span class="direction">
             Proximo
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Métodos disponíveis
+                Métodos leitura e Exclusão
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">

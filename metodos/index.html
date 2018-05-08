@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1">
     
       
-        <title>Métodos disponíveis - Milk's Rota - API de Integração</title>
+        <title>Métodos leitura e Exclusão - Milk's Rota - API de Integração</title>
       
       
       
@@ -97,7 +97,7 @@
             
           </span>
         
-        Métodos disponíveis
+        Métodos leitura e Exclusão
       </div>
     </div>
     
@@ -137,10 +137,10 @@
         <div class="">
           <img src="../images/logo-300x82.png" style="width: 200px;">
         </div>
-        <div style="text-align: right;">Versão 1.2</div>
+        <div style="text-align: right;">Versão 1.2.1</div>
       
       <!--<div class="name">
-        <strong>Milk's Rota - API de Integração Versão 1.2</strong>
+        <strong>Milk's Rota - API de Integração Versão 1.2.1</strong>
         
       </div>-->
     </div>
@@ -162,8 +162,8 @@
           
             
   <li>
-    <a class="current" title="Métodos disponíveis" href="./">
-      Métodos disponíveis
+    <a class="current" title="Métodos leitura e Exclusão" href="./">
+      Métodos leitura e Exclusão
     </a>
     
       
@@ -171,12 +171,6 @@
       
       
         <ul>
-          
-            <li class="anchor">
-              <a title="Inserir e Alterar" href="#inserir-e-alterar">
-                Inserir e Alterar
-              </a>
-            </li>
           
             <li class="anchor">
               <a title="Apagar Analises" href="#apagar-analises">
@@ -348,8 +342,8 @@
           
             
   <li>
-    <a class="" title="Anexos" href="../Anexos/">
-      Anexos
+    <a class="" title="Contato" href="../contato/">
+      Contato
     </a>
     
   </li>
@@ -357,8 +351,8 @@
           
             
   <li>
-    <a class="" title="Contato" href="../contato/">
-      Contato
+    <a class="" title="Anexos" href="../anexos/">
+      Anexos
     </a>
     
   </li>
@@ -388,102 +382,8 @@
       <article class="article">
         <div class="wrapper">
           
-          <h1 id="metodos-disponiveis">Métodos disponíveis<a class="headerlink" href="#metodos-disponiveis" title="Permanent link">#</a></h1>
+          <h1 id="metodos-leitura-e-exclusao-manutencao-das-informacoes-no-servidor">Métodos Leitura e Exclusão  - Manutenção das informações no Servidor<a class="headerlink" href="#metodos-leitura-e-exclusao-manutencao-das-informacoes-no-servidor" title="Permanent link">#</a></h1>
 <p>Os métodos abaixo estão disponíveis para chamada externa da API.</p>
-<hr />
-<h2 id="inserir-e-alterar"><strong> Inserir e Alterar </strong><a class="headerlink" href="#inserir-e-alterar" title="Permanent link">#</a></h2>
-<hr />
-<table>
-<thead>
-<tr>
-<th>Assinatura</th>
-<th>parametros</th>
-<th>função</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><a href="../anexos/#tbgruporotas">writeGrupoRota</a></td>
-<td>conta_id</td>
-<td>CRUD tabela de Grupo de Rotas</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbrotas">writeRota</a></td>
-<td>conta_id</td>
-<td>CRUD tabela de Rotas</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tblinhas">writeLinha</a></td>
-<td>conta_id</td>
-<td>CRUD tabela de Linhas</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbcoletores">writeColetor</a></td>
-<td>conta_id</td>
-<td>CRUD tabela coletores/motoristas</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbprodutores">writeProdutor</a></td>
-<td>conta_id</td>
-<td>CRUD tabela produtores</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbfazendas">writeFazenda</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Fazendas</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbveiculos">writeVeiculo</a></td>
-<td>conta_id</td>
-<td>CRUD tabela veículos transportadores</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbtanques">writeTanque</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Tanques de armazenamento</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbextratos">writeExtrato</a></td>
-<td>conta_id</td>
-<td>CRUD tabela extratos de coletas dos produtores</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbitinerarios">writeItinerario</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Itinerarios e ordem de coleta</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbtecnicos">writeTecnico</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Tecnicos de plataforma e seguidores de rota</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbtags">writeTag</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Tags NFC</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbanalises">writeAnalise</a></td>
-<td>conta_id</td>
-<td>CRUD tabela analise de qualidade dos produtos</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbmotivos">writeMotivo</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Motivos de Cancelamentos de coletas</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbvinculados">writeVinculado</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Tanques Comunitário ou Coletivo</td>
-</tr>
-<tr>
-<td><a href="../anexos/#tbseguidores">writeSeguidor</a></td>
-<td>conta_id</td>
-<td>CRUD tabela Seguidores de Rota</td>
-</tr>
-</tbody>
-</table>
 <h2 id="apagar-analises">Apagar Analises<a class="headerlink" href="#apagar-analises" title="Permanent link">#</a></h2>
 <p>Reseta todos os dados de análise de uma conta.</p>
 <table>
@@ -2409,7 +2309,7 @@
 </tr>
 <tr>
 <td>Tipo</td>
-<td>Tipo de Pessoa - <strong>(F) Física (J) Jurídica</strong></td>
+<td>Tipo de Pessoa <strong>(F) Física (J) Jurídica</strong></td>
 </tr>
 <tr>
 <td>conta_id</td>
@@ -2445,7 +2345,7 @@
 </tr>
 <tr>
 <td>ie</td>
-<td>Inscriçao Estadual</td>
+<td>Inscrição Estadual para pessoas jurídicas</td>
 </tr>
 <tr>
 <td>uf</td>
@@ -3786,14 +3686,14 @@
     </div>
     <div class="next">
       
-        <a href="../Anexos/" title="Anexos">
+        <a href="../contato/" title="Contato">
           <span class="direction">
             Proximo
           </span>
           <div class="page">
             <div class="stretch">
               <div class="title">
-                Anexos
+                Contato
               </div>
             </div>
             <div class="button button-next" role="button" aria-label="Next">
