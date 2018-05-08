@@ -23,12 +23,12 @@
     
     <meta property="og:url" content="http://www.milksrota.com.br/">
     <meta property="og:title" content="Milk's Rota - API de Integração">
-    <meta property="og:image" content="http://www.milksrota.com.br//./images/logo-milks.png">
+    <meta property="og:image" content="http://www.milksrota.com.br//./images/logo-300x82.png">
     <meta name="apple-mobile-web-app-title" content="Milk's Rota - API de Integração">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     
-      <link rel="apple-touch-icon" href="./images/logo-milks.png">
+      <link rel="apple-touch-icon" href="./images/logo-300x82.png">
     
     
     <link rel="shortcut icon" type="image/x-icon" href="./assets/images/favicon-e565ddfa3b.ico">
@@ -133,11 +133,11 @@
       <div class="drawer">
         <nav aria-label="Navigation">
   
-  <a href="https://milksrota.github.io/api-doc/" class="project">
+  <a href="/" class="project">
     <div class="banner">
       
         <div class="">
-          <img src="./images/logo-milks.png" style="width: 200px;">
+          <img src="./images/logo-300x82.png" style="width: 200px;">
         </div>
         <div style="text-align: right;">Versão 1.2</div>
       
@@ -212,7 +212,7 @@
           
             
   <li>
-    <a class="" title="Anexos" href="anexos/">
+    <a class="" title="Anexos" href="Anexos/">
       Anexos
     </a>
     
@@ -438,10 +438,28 @@ Codigo/Descricao/aplicacao  </p>
 <p><strong>Produtores</strong>: Dados cadastrais do produtores/fornecedores que mantem relação comercial com a empresa.</p>
 <blockquote>
 <p>Ex.: 
-Codigo_Produtor/Nome/Fone_Conta/Celular/Email/  </p>
-<p>P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@sclrota.com.br/     <br />
-P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@sclrota.com.br/      </p>
+Codigo_Produtor/Nome/Fone_Conta/Celular/Email/Tipo/documento/IE  </p>
+<p>P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@sclrota.com.br/F/59613656677/ /     <br />
+P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@sclrota.com.br/F/23456789122/ /</p>
 </blockquote>
+<table>
+<thead>
+<tr>
+<th align="center">Tipo Produtor</th>
+<th>Descricao</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">J</td>
+<td>Pessoa Jurídica</td>
+</tr>
+<tr>
+<td align="center">F</td>
+<td>Pessoa Física</td>
+</tr>
+</tbody>
+</table>
 <p><strong>obs: O código de identificação do produtor precisar ser reconhecível pelo sistema ERP da empresa contratante,pois os registros das coletas vem marcados com este código no arquivo de integração de retorno.</strong>  </p>
 <p><strong>Fazendas</strong>: Informações básicas das fazendas produtoras.</p>
 <blockquote>
