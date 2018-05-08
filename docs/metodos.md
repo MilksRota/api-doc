@@ -1,30 +1,6 @@
-# Métodos disponíveis
+# Métodos Leitura e Exclusão  - Manutenção das informações no Servidor
 
 Os métodos abaixo estão disponíveis para chamada externa da API.
-
-----  
-## ** Inserir e Alterar **
-----  
-
-|Assinatura|parametros|função|
-|----------|---------|------|
-|[writeGrupoRota](anexos/#tbgruporotas)|conta_id|CRUD tabela de Grupo de Rotas|
-|[writeRota](anexos/#tbrotas)|conta_id|CRUD tabela de Rotas|
-|[writeLinha](anexos/#tblinhas)|conta_id|CRUD tabela de Linhas |  
-|[writeColetor](anexos/#tbcoletores)|conta_id|CRUD tabela coletores/motoristas|
-|[writeProdutor](anexos/#tbprodutores)|conta_id|CRUD tabela produtores|
-|[writeFazenda](anexos/#tbfazendas)|conta_id|CRUD tabela Fazendas|
-|[writeVeiculo](anexos/#tbveiculos)|conta_id|CRUD tabela veículos transportadores|
-|[writeTanque](anexos/#tbtanques)|conta_id|CRUD tabela Tanques de armazenamento|
-|[writeExtrato](anexos/#tbextratos)|conta_id|CRUD tabela extratos de coletas dos produtores|
-|[writeItinerario](anexos/#tbitinerarios)|conta_id|CRUD tabela Itinerarios e ordem de coleta|
-|[writeTecnico](anexos/#tbtecnicos)|conta_id|CRUD tabela Tecnicos de plataforma e seguidores de rota|
-|[writeTag](anexos/#tbtags)|conta_id|CRUD tabela Tags NFC|
-|[writeAnalise](anexos/#tbanalises)|conta_id|CRUD tabela analise de qualidade dos produtos|
-|[writeMotivo](anexos/#tbmotivos)|conta_id|CRUD tabela Motivos de Cancelamentos de coletas|
-|[writeVinculado](anexos/#tbvinculados)|conta_id|CRUD tabela Tanques Comunitário ou Coletivo|
-|[writeSeguidor](anexos/#tbseguidores)|conta_id|CRUD tabela Seguidores de Rota|
-
 
 ## Apagar Analises
 
@@ -720,6 +696,7 @@ recupera os registros dos produtores
 | Campo | Descrição |
 |-------|-----------|
 | id    | Identificação única do registro na API |
+| Tipo  | Tipo de Pessoa **(F) Física (J) Jurídica** |
 | conta_id | Identificação única do conta na API |
 | dt_push | Data da última atualização do registro na API, formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__ |
 | codigo | Código de identificação do produtor no ERP  |
@@ -728,6 +705,7 @@ recupera os registros dos produtores
 | logradouro | Endereço do Produtor |
 | cidade | Cidade do endereço do Produtor |
 | doc | Documento de Identificação do Produtor |
+| ie    | Inscrição Estadual para pessoas jurídicas |
 | uf | Estado no endereço do Produtor |
 | cep | Código de endereçamento postal do produtor |
 | dt_create | Data de criação do registro na API, formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__ |

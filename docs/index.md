@@ -2,25 +2,24 @@
 
 ## Visão Geral
 
-Este documento tem por objetivo fornecer uma orientação detalhada das funcionalidades de integração da plataforma de
+Este documento tem por objetivo fornecer uma documentação detalhada da funcionalidade de integração da plataforma de
 gestão do Milk's Rota, para comunicação com outros serviços e sistemas externos.
 
- Milk's Rota é uma plataforma exclusiva e dedicada, criada para aumentar a produtividade
+A comunicação com a __API__ se dá através de requisições __POST__ do protocolo __HTTP__. Esses métodos precisam ser chamados
+passando os devidos parâmetros e a API irá retornar os resultados no formado __JSON__
+
+## Introdução 
+
+  O Milk's Rota é uma plataforma exclusiva e dedicada, criada para aumentar a produtividade
 	e reduzir custos no processo de coleta e captação de leite de laticínios e cooperativas. 
 	Utilizando as tecnologias web e mobile mais modernas, ela automatiza o processo de coleta 
 	de ponta-a-ponta, simplificando a operação para carreteiros, técnicos e administração. 
 	São fornecidas informações valiosas que facilitam a gestão, tomada de decisões estratégicas e operacionais.
 	
- Para viabilizar a troca de informações entres os mais variados sistemas de gestão do mercado, 
+  Para viabilizar a troca de informações entres os mais variados sistemas de gestão do mercado, 
 	foi criada uma A.P.I. de integração que disponibiliza métodos de acesso á base de dados de nosso servidor, 
 	de forma segura e controlada, por meio dos quais a equipe técnica das empresas pode acessar e registrar as 
 	informações no ambiente.
-
-
-
-A comunicação com a __API__ se dá através de requisições __POST__ do protocolo __HTTP__. Esses métodos precisam ser chamados
-passando os devidos parâmetros e a API irá retornar os resultados no formado __JSON__
-
 
 
 ## Autenticação
@@ -37,7 +36,7 @@ Para obter essas informações, entre em contato com a equipe de suporte atravé
 
 ## Exemplo
 
-### Requisição
+#### Requisição
 
 ```http
 POST /api/retaguardasync/writeTag HTTP/1.1
@@ -61,7 +60,7 @@ Accept: application/json
 }
 ```
 
-### Resposta
+#### Resposta
 
 ```http
 HTTP/1.1 200 OK
@@ -71,18 +70,20 @@ Content-Length: xxxx
 {"success":true,"message":"OK","data":[],"monitor.time":7.0328681469}
 ```
 
-## Modelos de Integração
+##  FORMAS DE INTEGRAÇÃO 
+
+
+### Modelos de Integração
 
   Estão disponíveis dois modelos de integração entre a plataforma Milk's Rota e os sistemas ERP das empresas contratantes.
-   
   
 -------
-### 1 - Troca de Informações por arquivos
+(1) - Troca de Informações por arquivos
 -------  
   Previmos a utilização de arquivos tipados no formato texto simples, por meio dos quais as informações podem ser enviadas e recebidas
   da plataforma. Estes arquivos tem como requisitos básicos a utilização de um caracter separador padrão ("|","-", "/",etc.) entre os atributos e a necessidade de que a "**primeira linha do arquivo contenha o nome do atributo como coluna da tabela**".
   
-  Neste modelo, utilizaremos um utilitário integrador que opera em um servidor na "Nuvem" para fazer o mapeamento das informações e enviá-las ao servidor Milk' Rota.
+  Neste modelo, utilizaremos um utilitário integrador que opera no módo "Stand-alone" para fazer o mapeamento das informações, inserir em tabelas temporárias e enviá-las ao servidor Milk's Rota.
   
   obs: Escolha um caracter separador que NÃO faça parte da construção dos nomes das colunas
   
@@ -101,20 +102,20 @@ São permitidos nomes do tipo (codigo-da-linha ou codigo_da_linha), onde não ha
 
 ### Cadastros básicos para operação
 
-  O coletor Milk' Rota é uma App Mobile que opera nos modos **on line** e **off-line**, com seleção automática, dependendo da disponibilidade de conexão ás redes móveis ou Wi-Fi.
+  O coletor Milk's Rota é uma App Mobile que opera nos modos **on line** e **off-line**, com seleção automática, dependendo da disponibilidade de conexão ás redes móveis ou Wi-Fi.
   
   Ao iniciar ou finalizar uma viagem, o equipamento coletor deve estar conectado a uma rede de transferência de dados para receber um pacote de carga com as informações dos produtores, pontos de coleta, dados dos veículos transportadores, forma de descarga, etc., e também para fazer a sincronização dos dados coletados com o servidor Web ao final do percurso nas linhas.
   
   Se não houver sinal de dados ao iniciar uma viagem, o coletor não fará o processo de auto-atualização da base de dados, e os registros poderão ser feitos com base na última carga recebida. Será imprescindível que ao finalizar uma linha de coleta, o sistema detecte uma conexão de dados disponível, caso contrário, o servidor web não será atualizado e o conjunto coletor (Celular + impressora) ficará indisponível para abertura de novas viagens, até se faça a conexão e a descarga das informações para o servidor. 
   
   ----
-## Carga na base de dados
+### Carga na base de dados
   ---
   
-  Este é o conjunto de informações que devem ser extraídas do sistema ERP da empresa contratante e enviados á plataforma SclRota para alimentar os dispositivos coletores móveis:
+  Este é o conjunto de informações que devem ser extraídas do sistema ERP da empresa contratante e enviados á plataforma Milk's Rota para alimentar os dispositivos coletores móveis:
   
   
-  **Grupos de Rotas**:  Definimos com grupos de rotas, um container que represente o primeiro nível hierárquico de rotas de coleta dentro da organização ou empresa que utiliza a plataforma sclrota.
+  **Grupos de Rotas**:  Definimos com grupos de rotas, um container que represente o primeiro nível hierárquico de rotas de coleta dentro da organização ou empresa que utiliza a plataforma Milk's Rota.
 >
   Ex.: 0001 -  GR_02976205000132 
 >
@@ -171,8 +172,8 @@ Grupo de rotas da empresa "LATICÍNIOS EXEMPLO"
 >Ex.: 
 >Codigo/Nome/celular/email/  
 
->L001/Jose Antonio/31 99999-4949/jose.antonio@sclrota.com.br/       
->L002/Marcos Vinicius/32 99999-8888/marcos.vinicius@sclrota.com.br/       
+>L001/Jose Antonio/31 99999-4949/jose.antonio@Milk's Rota.com.br/       
+>L002/Marcos Vinicius/32 99999-8888/marcos.vinicius@Milk's Rota.com.br/       
 
 
 **Motivos de Cancelamento**: Conjunto de justificativas aceitáveis quando uma coleta programada não for realizada. Estes motivos serão utilizados tanto para as coletas simples, quando para as coletas especiais que geralmente são enviadas para análise de qualidade do produto em laboratórios externos à empresa.
@@ -191,12 +192,18 @@ Grupo de rotas da empresa "LATICÍNIOS EXEMPLO"
 **Produtores**: Dados cadastrais do produtores/fornecedores que mantem relação comercial com a empresa.
   
 >Ex.: 
->Codigo_Produtor/Nome/Fone_Conta/Celular/Email/  
+>Codigo_Produtor/Nome/Fone_Conta/Celular/Email/doc/ie/tipo  
 
->P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@sclrota.com.br/       
->P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@sclrota.com.br/      
+>P001/Jose Antonio/31 3332-1010/31 99999-4949/jose.antonio@Milk's Rota.com.br/59613654600//F       
+>P002/Marcos Vinicius/32 3411-2210/32 99999-8888/marcos.vinicius@Milk's Rota.com.br/23467892344//F      
  
-**obs: O código de identificação do produtor precisar ser reconhecível pelo sistema ERP da empresa contratante,pois os registros das coletas vem marcados com este código no arquivo de integração de retorno.**  
+**obs: O código de identificação do produtor precisar ser reconhecível pelo sistema ERP da empresa contratante,pois os registros das coletas vem marcados com este código no arquivo de integração de retorno.**
+
+|Tipo|Descricao|
+|:------------:|--------|
+|F|Pessoa Fíisica|
+|J|Pessoa Jurídica|
+  
 
 **Fazendas**: Informações básicas das fazendas produtoras.
   
@@ -259,7 +266,7 @@ Nota: Cada tanque coletivo deve conter apenas uma linha com o atributo "**respon
 São aceitos "N" registros de participantes para os tanques e o vincúlo acontece pelo código do produtor;  
 Caso seja informado o percentual de participação do produtor no tanque para cálculo de distribuição de volumes, O atributo **divisao** do tanque deve ter o conteúdo "**A**" (Automática) e o atributo distribuição deve ter o conteúdo "**DC**" (distribuição pelo coletor), na tabela de registro do tanque.
 
-  **Tags NFC**: A paltaforma SclRota faz a identificação de vários atores do processo através da tecnologia NFC (Near Field Comunication). São identificados os motoristas/coletores, veículos, pontos de coleta, reboques e técnicos de plataforma.
+  **Tags NFC**: A paltaforma Milk's Rota faz a identificação de vários atores do processo através da tecnologia NFC (Near Field Comunication). São identificados os motoristas/coletores, veículos, pontos de coleta, reboques e técnicos de plataforma.
   
   As etiquetas NFC tem um identificador único que precisa ser vinculado ao ator que será identificado. Como não existe gravação ou regravação direta, usaremos o modelo de tabela abaixo para gerar as associações.  
   Reutilização dos identificadores NFC são permitidos naturalmente, basta que o ID da tag NFC seja desvinculado de um ator e vinculado a outro.
@@ -295,3 +302,45 @@ Caso seja informado o percentual de participação do produtor no tanque para c�
 >0003/R001/001/F0003/P0007/3/08:10    
 >0004/R001/001/F0001/P0022/4/09:00    
 
+
+
+--------
+ (2) - Consumo dos métodos do WebService  
+--------
+
+  A plataforma Milk's Rota disponibiliza, por meio de um serviço Web, vários métodos de leitura e gravação na base de dados. A forma de comunicação entre as partes e feita por meio de trocas de mensagens no formato JSON (JavaScript Object Notation) em operações POST.
+  
+  A seguir listaremos a URI Base de comunicação e as assinaturas dos métodos de leitura e gravação.
+
+
+  **Endereço Base do Servidor**  
+
+*  **http://app.sclrota.com.br/api/retaguardasync (AMBIENTE DE PRODUÇÃO)**
+
+*  **http://teste.sclrota.com.br/api/retaguardasync (AMBIENTE DE HOMOLOGAÇÃO E TESTES)**
+
+  As credenciais de acesso são fornecidas na instalação da plataforma. Nas operações com o servidor será necessário incluir no arquivo JSON a chave de identificação da conta além dos parâmetros requeridos para cada método.
+  
+  
+  
+### Métodos Inclusão/Alteração disponíveis
+  
+
+|Assinatura|parametros|função|
+|----------|---------|------|
+|[writeGrupoRota](anexos/#tbgruporotas)|conta_id|CRUD tabela de Grupo de Rotas|
+|[writeRota](anexos/#tbrotas)|conta_id|CRUD tabela de Rotas|
+|[writeLinha](anexos/#tblinhas)|conta_id|CRUD tabela de Linhas |  
+|[writeColetor](anexos/#tbcoletores)|conta_id|CRUD tabela coletores/motoristas|
+|[writeProdutor](anexos/#tbprodutores)|conta_id|CRUD tabela produtores|
+|[writeFazenda](anexos/#tbfazendas)|conta_id|CRUD tabela Fazendas|
+|[writeVeiculo](anexos/#tbveiculos)|conta_id|CRUD tabela veículos transportadores|
+|[writeTanque](anexos/#tbtanques)|conta_id|CRUD tabela Tanques de armazenamento|
+|[writeExtrato](anexos/#tbextratos)|conta_id|CRUD tabela extratos de coletas dos produtores|
+|[writeItinerario](anexos/#tbitinerarios)|conta_id|CRUD tabela Itinerarios e ordem de coleta|
+|[writeTecnico](anexos/#tbtecnicos)|conta_id|CRUD tabela Tecnicos de plataforma e seguidores de rota|
+|[writeTag](anexos/#tbtags)|conta_id|CRUD tabela Tags NFC|
+|[writeAnalise](anexos/#tbanalises)|conta_id|CRUD tabela analise de qualidade dos produtos|
+|[writeMotivo](anexos/#tbmotivos)|conta_id|CRUD tabela Motivos de Cancelamentos de coletas|
+|[writeVinculado](anexos/#tbvinculados)|conta_id|CRUD tabela Tanques Comunitário ou Coletivo|
+|[writeSeguidor](anexos/#tbseguidores)|conta_id|CRUD tabela Seguidores de Rota|

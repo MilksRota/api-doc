@@ -14,7 +14,7 @@ theme_dir: material
 
 # Opções
 extra:
-  version: Versão 1.2
+  version: Versão 1.2.1
   logo: images/logo-300x82.png
   i18n:
     prev: 'Voltar'
@@ -35,6 +35,6 @@ markdown_extensions:
 # Árvore de páginas
 pages:
   - API de integração: 'index.md'
-  - Métodos disponíveis: 'metodos.md'
-  - Anexos: 'anexos.md'
+  - Métodos leitura e Exclusão: 'metodos.md'
   - Contato: 'contato.md'
+  - Anexos: 'anexos.md'
