@@ -80,6 +80,7 @@
 ```  
 {"conta_id":70387,
  "data":[{"codigo":"P001",
+          "ipo":"F"
           "nome":"Jose Maria Melo",
 		  "logradouro":"Rua X",
 		  "numero":"99",
@@ -87,7 +88,8 @@
 		  "cidade":"Sao Paulo",		  
 		  "uf":"SP",		  
 		  "cep":"11850000",
-		  "doc":"SP 96801125",		  		  
+		  "doc":"SP 96801125",
+		  "ie":"", 		  		  
 		  "deleted":"0"
 		  }
 		]

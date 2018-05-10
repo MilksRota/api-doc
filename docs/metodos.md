@@ -8,7 +8,7 @@ Reseta todos os dados de análise de uma conta.
 
 |Método | URL
 |-------|----
-|clearAlise |**http://app.milksrota.com.br/api/retaguardasync/clearAnalise**
+|clearAlise |**http://app.sclrota.com.br/api/retaguardasync/clearAnalise**
 
 
 ### Parâmetros da requisição
@@ -35,7 +35,7 @@ Reseta todos os dados de uma conta, mas não exclui o registro da conta.
 
 |Método | URL
 |-------|----
-|clearConta |**http://app.milksrota.com.br/api/retaguardasync/clearConta**|
+|clearConta |**http://app.sclrota.com.br/api/retaguardasync/clearConta**|
 
 
 ### Parâmetros da requisição
@@ -62,7 +62,7 @@ Reseta todos os dados de extrato de uma conta.
 
 |Método | URL
 |-------|----
-|clearExtrato |**http://app.milksrota.com.br/api/retaguardasync/clearExtrato**|
+|clearExtrato |**http://app.sclrota.com.br/api/retaguardasync/clearExtrato**|
 
 
 ### Parâmetros da requisição
@@ -88,7 +88,7 @@ Reseta todos os dados os grupos de rota vinculados a uma conta.
 
 |Método | URL
 |-------|----
-|clearGrupoRota|**http://app.milksrota.com.br/api/retaguardasync/clearGrupoRota**|
+|clearGrupoRota|**http://app.sclrota.com.br/api/retaguardasync/clearGrupoRota**|
 
 
 ### Parâmetros da requisição
@@ -114,7 +114,7 @@ Reseta todos os dados de itinerários vinculados a uma conta.
 
 |Método | URL
 |-------|----
-|clearItinerario |**http://app.milksrota.com.br/api/retaguardasync/clearItinerario**|
+|clearItinerario |**http://app.sclrota.com.br/api/retaguardasync/clearItinerario**|
 
 
 ### Parâmetros da requisição
@@ -140,7 +140,7 @@ Reseta todos os dados de tags NFC vinculadas a uma conta.
 
 |Método | URL
 |-------|----
-|clearTag |**http://app.milksrota.com.br/api/retaguardasync/clearTag**|
+|clearTag |**http://app.sclrota.com.br/api/retaguardasync/clearTag**|
 
 
 ### Parâmetros da requisição
@@ -166,7 +166,7 @@ Reseta todos os dados de tanques vinculados de uma conta.
 
 |Método | URL
 |-------|----
-|clearVinculado |**http://app.milksrota.com.br/api/retaguardasync/clearVinculado**|
+|clearVinculado |**http://app.sclrota.com.br/api/retaguardasync/clearVinculado**|
 
 
 ### Parâmetros da requisição
@@ -192,7 +192,7 @@ Recupera todos os registros de coletas realizadas em um período, vinculadas a u
 
 |Método | URL
 |-------|----
-|readColeta |**http://app.milksrota.com.br/api/retaguardasync/readColeta**|
+|readColeta |**http://app.sclrota.com.br/api/retaguardasync/readColeta**|
 
 
 ### Parâmetros da requisição
@@ -254,7 +254,7 @@ recupera os registros dos agentes de coleta
 
 |Método | URL
 |-------|----
-|readColetor |**http://app.milksrota.com.br/api/retaguardasync/readColetor**|
+|readColetor |**http://app.sclrota.com.br/api/retaguardasync/readColetor**|
 
 
 ### Parâmetros da requisição
@@ -299,7 +299,7 @@ recupera os registros de distribuição de volumes para cada participante de tan
 
 |Método | URL
 |-------|----
-|readColetaComunitaria |**http://app.milksrota.com.br/api/retaguardasync/readColetaComunitaria**|
+|readColetaComunitaria |**http://app.sclrota.com.br/api/retaguardasync/readColetaComunitaria**|
 
 
 ### Parâmetros da requisição
@@ -362,7 +362,7 @@ recupera os registros das descargas e volumes armazenados nos balões e silos da
 
 |Método | URL
 |-------|----
-|readDescarga |**http://app.milksrota.com.br/api/retaguardasync/readDescarga**|
+|readDescarga |**http://app.sclrota.com.br/api/retaguardasync/readDescarga**|
 
 
 ### Parâmetros da requisição
@@ -417,7 +417,7 @@ recupera os registros das fazendas
 
 |Método | URL
 |-------|----
-|readFazenda |**http://app.milksrota.com.br/api/retaguardasync/readFazenda**|
+|readFazenda |**http://app.sclrota.com.br/api/retaguardasync/readFazenda**|
 
 
 ### Parâmetros da requisição
@@ -467,7 +467,7 @@ recupera os registros de grupos de rotas
 
 |Método | URL
 |-------|----
-|readGrupoRota |**http://app.milksrota.com.br/api/retaguardasync/readGrupoRota**|
+|readGrupoRota |**http://app.sclrota.com.br/api/retaguardasync/readGrupoRota**|
 
 
 ### Parâmetros da requisição
@@ -504,7 +504,7 @@ recupera os registros dos itinerário
 
 |Método | URL
 |-------|----
-|readItinerario |**http://app.milksrota.com.br/api/retaguardasync/readItinerario**|
+|readItinerario |**http://app.sclrota.com.br/api/retaguardasync/readItinerario**|
 
 
 ### Parâmetros da requisição
@@ -548,7 +548,7 @@ recupera os registros das linhas de coleta
 
 |Método | URL
 |-------|----
-|readLinha |**http://app.milksrota.com.br/api/retaguardasync/readLinha**|
+|readLinha |**http://app.sclrota.com.br/api/retaguardasync/readLinha**|
 
 
 ### Parâmetros da requisição
@@ -588,7 +588,7 @@ recupera os registros de Justificativas de cancelamento de coleta
 
 |Método | URL
 |-------|----
-|readMotivo |**http://app.milksrota.com.br/api/retaguardasync/readMotivo**|
+|readMotivo |**http://app.sclrota.com.br/api/retaguardasync/readMotivo**|
 
 
 ### Parâmetros da requisição
@@ -629,7 +629,7 @@ recupera os registros de ocorrências registradas na viagens
 
 |Método | URL
 |-------|----
-|readOcorrencia |**http://app.milksrota.com.br/api/retaguardasync/readOcorrencia**|
+|readOcorrencia |**http://app.sclrota.com.br/api/retaguardasync/readOcorrencia**|
 
 
 ### Parâmetros da requisição
@@ -670,7 +670,7 @@ recupera os registros dos produtores
 
 |Método | URL
 |-------|----
-|readProdutor |**http://app.milksrota.com.br/api/retaguardasync/readProdutor**|
+|readProdutor |**http://app.sclrota.com.br/api/retaguardasync/readProdutor**|
 
 
 ### Parâmetros da requisição
@@ -712,13 +712,78 @@ recupera os registros dos produtores
 | dt_delete | Data da exclusão lógica do registro na API, formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__ |
 | deleted | 1 => Registro Inativo<br> 0 => Registro Ativo |
 
+## Ler Resumo das coletas
+
+recupera os registros resumidos das coletas de uma viagem específica
+
+|Método | URL
+|-------|----
+|readResumoColeta |**http://app.sclrota.com.br/api/retaguardasync/readResumoColeta**|
+
+
+### Parâmetros da requisição
+
+| Parâmetro   | Descrição
+|-------------|----------
+| conta_id    | Código de identificação da conta
+| token       | Token de autorização da conta na API
+| viagem_id   | identificador único da viagem 
+| comunitario | __(0) Retorna apenas coletas individuais (1) retorna apenas distribuiçao tanques comunitários__
+
+__Obs: Uma chamada deve ser feita para receber as coletas individuais e outra para receber a distribuição dos tanques coletivos/comunitários
+afim de se obter todos os registros com o volume total da viagem.__
+
+### Retorno
+
+| Retorno | Descrição | Valores
+|---------|-----------|-------
+| success | Se a operação foi bem sucedida ou não | __false__: não foi possível recuperar os dados<br>__true__: operação bem sucedida
+| message | Mensagem de confirmação do resultado
+| data    | Array de objetos JSON representando os registros das coletas da viagem indicada
+
+
+
+### Estrutura do Registro de Resumo de Coletas
+
+| Campo | Descrição |
+|-------|-----------|
+| id    | Identificação única do registro na API |
+| dt_push | Data e Hora de gravação do registro , formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__ |
+| parada_id | Identificador único do registro da visita |
+| coletor_id | Identificador único do motorista/agente de coletas |
+| tanque_id | Identificador único do tanque (ponto de coleta) |
+| viagem | Identificador único da viagem (viagem_id) solicitado |
+| dt_coleta | Data e Hora da coleta , formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__  |
+| CodigoFazenda | Código da Fazenda onde ocorreu a coleta |
+| NomeFazenda | Nome da Fazenda onde ocorreu a coleta |
+| CodigoProdutor | Código do Produtor |
+| NomeProdutor | Nome do Produtor |
+| Tanque | Código do Tanques (Ponto de coleta) na Fazenda onde ocorreu a coleta |
+| Quantidade | quantidade de leite coletado |
+| Regua | Medida da régua obtida do volume coletado |
+| Alizarol | Resultado do exame de alizarol (acidez) __"(1) Aprovado, (2) Reprovado"__ |
+| Amostra | Número da amostra de rastreabilidade  |
+| Contraprova | Número de Amostra para contraprova de exames laboratoriais |
+| Temperatura | Temperatura registrada no momento da coleta |
+| Coletada | Indica se o volume foi coletado ou não __"(1) Coletado (0) Não Coletado"__|
+| Codigolinha | Código da principal linha de coleta percorrida na viagem  |
+| Nomelinha | Nome da linha de coleta da viagem|
+| CodigoRota |Código da Rota (agrupamento de linhas) selecionado na viagem |
+| Rota |Nome da rota selecionada na viagem |
+| Veiculo |Placa do veículo utilizado para realizar a viagem |
+| CodigoMotorista |Código do agente de coleta que executou a vaigem (Motorista) |
+| NomeMotorista |Nome do agente de coleta que executou a viagem  |
+| dt_edicao | Data e Hora da ultimaalteração no registro , formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__  |
+
+
+
 ## Ler Resumo das viagens
 
 recupera os registros de resumo das viagens finalizadas em um período
 
 |Método | URL
 |-------|----
-|readResumoViagem |**http://app.milksrota.com.br/api/retaguardasync/readResumoViagem**|
+|readResumoViagem |**http://app.sclrota.com.br/api/retaguardasync/readResumoViagem**|
 
 
 ### Parâmetros da requisição
@@ -738,6 +803,8 @@ recupera os registros de resumo das viagens finalizadas em um período
 | success | Se a operação foi bem sucedida ou não | __false__: não foi possível recuperar os dados<br>__true__: operação bem sucedida
 | message | Mensagem de confirmação do resultado
 | data    | Array de objetos JSON representando os registros das Rotas
+
+
 
 ### Estrutura do Registro de Resumo de Viagens
 
@@ -776,7 +843,7 @@ recupera os registros de rotas
 
 |Método | URL
 |-------|----
-|readRota |**http://app.milksrota.com.br/api/retaguardasync/readRota**|
+|readRota |**http://app.sclrota.com.br/api/retaguardasync/readRota**|
 
 
 ### Parâmetros da requisição
@@ -816,7 +883,7 @@ recupera os registros de Seguidores de rota
 
 |Método | URL
 |-------|----
-|readSeguidor |**http://app.milksrota.com.br/api/retaguardasync/readSeguidor**|
+|readSeguidor |**http://app.sclrota.com.br/api/retaguardasync/readSeguidor**|
 
 
 ### Parâmetros da requisição
@@ -858,7 +925,7 @@ recupera os registros de Tag NFC e seus respectivos vinculos de utilização
 
 |Método | URL
 |-------|----
-|readTag |**http://app.milksrota.com.br/api/retaguardasync/readTag**|
+|readTag |**http://app.sclrota.com.br/api/retaguardasync/readTag**|
 
 
 ### Parâmetros da requisição
@@ -905,7 +972,7 @@ recupera os registros de Tanques de armazenamento nos pontos de coleta, veículo
 
 |Método | URL
 |-------|----
-|readTanque |**http://app.milksrota.com.br/api/retaguardasync/readTanque**|
+|readTanque |**http://app.sclrota.com.br/api/retaguardasync/readTanque**|
 
 
 ### Parâmetros da requisição
@@ -960,7 +1027,7 @@ recupera os registros dos técnicos de plataforma, administradores e seguidores 
 
 |Método | URL
 |-------|----
-|readTecnico |**http://app.milksrota.com.br/api/retaguardasync/readTecnio**|
+|readTecnico |**http://app.sclrota.com.br/api/retaguardasync/readTecnio**|
 
 
 ### Parâmetros da requisição
@@ -1006,7 +1073,7 @@ recupera os registros dos veículos cadastrados na plataforma.
 
 |Método | URL
 |-------|----
-|readVeiculo |**http://app.milksrota.com.br/api/retaguardasync/readVeiculo**|
+|readVeiculo |**http://app.sclrota.com.br/api/retaguardasync/readVeiculo**|
 
 
 ### Parâmetros da requisição
@@ -1048,7 +1115,7 @@ recupera os registros das viagens finalizadas em um período.
 
 |Método | URL
 |-------|----
-|readViagem |**http://app.milksrota.com.br/api/retaguardasync/readViagem**|
+|readViagem |**http://app.sclrota.com.br/api/retaguardasync/readViagem**|
 
 
 ### Parâmetros da requisição
@@ -1107,7 +1174,7 @@ recupera os registros dos produtores vinculados em tanques coletivos.
 
 |Método | URL
 |-------|----
-|readVinculado |**http://app.milksrota.com.br/api/retaguardasync/readVinculado**|
+|readVinculado |**http://app.sclrota.com.br/api/retaguardasync/readVinculado**|
 
 
 ### Parâmetros da requisição
