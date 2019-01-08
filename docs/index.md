@@ -246,7 +246,7 @@ comunitario/distribuicao/diferenca/impressao/divisao/
 |Atributo|Domínio|
 |--------|-------|
 |Comunitario| 0 - Tanque individual  /  1 - Tanque Comunitário ou Coletivo|
-|Distribuicao| DP - Distribuicao pela Plataforma WEB  / DC - Distribuicao pelo motorista ou coletor|
+|Distribuicao| DP - Distribuicao pela Plataforma WEB  / DC - Distribuicao pelo motorista ou coletor / DA - Distribuição pelo App do tanque coletivo|
 |Diferenca| P - Diferenças de anotação vão para o proprietário  / D - Distribuição proporcional da diferença por participação|
 |Impressao| D - Detalhada - Imprime ticket de coleta para cada participante / S - Simplificada, apenas um ticket geral | 
 |Divisao| M - Manual, Coletor digita os valores  / A - Automática, Sistema calcula participação por percentual |

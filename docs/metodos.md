@@ -533,12 +533,14 @@ recupera os registros dos itinerário
 | conta_id | Identificação única do conta na API |
 | fazenda_id | Identificação Única da fazenda na API |
 | linha_id | Identificação Única da linha na API|
+| tanque_id | Identificação Única do tanque na API|
 | ordem | Ordem de coleta no itinerário |
 | codigo | código de itenficação do registro no ERP |
 | horario  | Horário previsto de realização da coleta |
 | dt_push | Data da última atualização do registro na base da API, no formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__ |
 | coleta_seletiva  | 1 => Indica que a coleta é seletiva e o volume será armazenado em um compartimento especial do veículo<br> 0 => Coleta normal |
 | fazenda | Código de Identificação da fazenda no ERP |
+| tanque | Código do Ponto de Coleta (Tanque/Resfriador)  no ERP |
 | linha | Código de Identificação da linha de coleta no ERP |
 | deleted | 1 => Registro Inativo<br> 0 => Registro Ativo |
 
@@ -727,7 +729,8 @@ recupera os registros resumidos das coletas de uma viagem específica
 |-------------|----------
 | conta_id    | Código de identificação da conta
 | token       | Token de autorização da conta na API
-| viagem_id   | identificador único da viagem 
+| doc         | CNPJ da empresa,registrado no cadastro da conta
+| viagem_id   | Identificador único da viagem 
 | comunitario | __(0) Retorna apenas coletas individuais (1) retorna apenas distribuiçao tanques comunitários__
 
 __Obs: Uma chamada deve ser feita para receber as coletas individuais e outra para receber a distribuição dos tanques coletivos/comunitários
@@ -1012,7 +1015,7 @@ recupera os registros de Tanques de armazenamento nos pontos de coleta, veículo
 | volume | Volume máximo comportado no tanque |
 | codigo | Código de identificação do Tanque no ERP |
 | comunitario | 1 => Tanque Coletivo ou comunitário<br> 0 => Tanque individual |
-| comunitario_lancamento | DC => Distribuição feita pelo agente de coleta<br> DP => Distribuição feita no painel de administração (Plataforma) |
+| comunitario_lancamento | DC => Distribuição feita pelo agente de coleta<br> DP => Distribuição feita no painel de administração (Plataforma)<br> DA=>Distribuição pelo App Tanque Coletivo |
 | comunitario_diferenca | P => Proprietário assume toda diferança<br> D => Distribui diferença proporcionalmente ao fornecimento para cada participante  |
 | porcentagem |Percentual de distribição - sem efeito |
 | comunitario_divisao |M => Manual (Agente de Coleta Informa)<br> A => Automática por percentual |
@@ -1020,6 +1023,8 @@ recupera os registros de Tanques de armazenamento nos pontos de coleta, veículo
 | coleta_seletiva | 1 => indica que a coleta neste tanque deve ser armazenada em compartimento especial no veículo<br> 0 => Armazenamento normal |
 | veiculo | Código de Identificação do veículo no ERP |
 | fazenda | Código de Identificação da Fazenda no ERP |
+| email | Credencial de aceso ao tanque comunitário pelo App tanque coletivo |
+| senha | senha de registro no App Tanque Coletivo |
 
 ## Ler Tecnicos
 

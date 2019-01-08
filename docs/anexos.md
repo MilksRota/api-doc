@@ -175,6 +175,8 @@
 		  "comunitario_diferenca":"",		  		  		  		  		  
 		  "comunitario_impressao":"",
 		  "porcentagem":"",		  		  		  		  	
+		  "email":"",		  		  		  		  	
+		  "senha":"",		  		  		  		  	
 		  "deleted":"0"
 		  }
 		]
@@ -212,12 +214,14 @@
 ```  
 {"conta_id":70387,
  "data":[{"fazenda":"F001",
+          "tanque": "T001",  
           "rota":"R001",
 		  "linha":"L001",
 		  "ordem":"1"	
 		  "horario":"07:00" 	
 		  },
 		 {"fazenda":"F003",
+		 "tanque": "T003",
           "rota":"R001",
 		  "linha":"L001",
 		  "ordem":"2"	
