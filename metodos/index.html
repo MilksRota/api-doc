@@ -203,6 +203,12 @@
             </li>
           
             <li class="anchor">
+              <a title="Fechar Vigência do Itinerário de uma linha de coleta" href="#fechar-vigencia-do-itinerario-de-uma-linha-de-coleta">
+                Fechar Vigência do Itinerário de uma linha de coleta
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Apagar Tags NFC" href="#apagar-tags-nfc">
                 Apagar Tags NFC
               </a>
@@ -684,8 +690,8 @@
 </tbody>
 </table>
 <hr />
-<h2 id="apagar-tags-nfc">Apagar Tags NFC<a class="headerlink" href="#apagar-tags-nfc" title="Permanent link">#</a></h2>
-<p>Reseta todos os dados de tags NFC vinculadas a uma conta.</p>
+<h2 id="fechar-vigencia-do-itinerario-de-uma-linha-de-coleta">Fechar Vigência do Itinerário de uma linha de coleta<a class="headerlink" href="#fechar-vigencia-do-itinerario-de-uma-linha-de-coleta" title="Permanent link">#</a></h2>
+<p>Seta uma data de vigência final para o itinerário de coleta de uma determinada lina da conta.</p>
 <table>
 <thead>
 <tr>
@@ -695,8 +701,8 @@
 </thead>
 <tbody>
 <tr>
-<td>clearTag</td>
-<td><strong>http://app.sclrota.com.br/api/retaguardasync/clearTag</strong></td>
+<td>closeItinerario</td>
+<td><strong>http://app.sclrota.com.br/api/retaguardasync/closeItinerario</strong></td>
 </tr>
 </tbody>
 </table>
@@ -717,6 +723,14 @@
 <td>token</td>
 <td>Token de autorização da conta na API</td>
 </tr>
+<tr>
+<td>doc</td>
+<td>CNPJ cadastrado para a conta (com máscara : 99.99.999/9999-99</td>
+</tr>
+<tr>
+<td>linha</td>
+<td>código da linha onde será executado o fechamento</td>
+</tr>
 </tbody>
 </table>
 <h3 id="retorno_5">Retorno<a class="headerlink" href="#retorno_5" title="Permanent link">#</a></h3>
@@ -732,7 +746,7 @@
 <tr>
 <td>success</td>
 <td>Se a operação foi bem sucedida ou não</td>
-<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+<td><strong>false</strong>: não foi possível fechar a vigência<br><strong>true</strong>: fechamento executado</td>
 </tr>
 <tr>
 <td>data</td>
@@ -742,8 +756,8 @@
 </tbody>
 </table>
 <hr />
-<h2 id="apagar-produtores-vinculados">Apagar Produtores Vinculados<a class="headerlink" href="#apagar-produtores-vinculados" title="Permanent link">#</a></h2>
-<p>Reseta todos os dados de tanques vinculados de uma conta.</p>
+<h2 id="apagar-tags-nfc">Apagar Tags NFC<a class="headerlink" href="#apagar-tags-nfc" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de tags NFC vinculadas a uma conta.</p>
 <table>
 <thead>
 <tr>
@@ -753,8 +767,8 @@
 </thead>
 <tbody>
 <tr>
-<td>clearVinculado</td>
-<td><strong>http://app.sclrota.com.br/api/retaguardasync/clearVinculado</strong></td>
+<td>clearTag</td>
+<td><strong>http://app.sclrota.com.br/api/retaguardasync/clearTag</strong></td>
 </tr>
 </tbody>
 </table>
@@ -800,6 +814,64 @@
 </tbody>
 </table>
 <hr />
+<h2 id="apagar-produtores-vinculados">Apagar Produtores Vinculados<a class="headerlink" href="#apagar-produtores-vinculados" title="Permanent link">#</a></h2>
+<p>Reseta todos os dados de tanques vinculados de uma conta.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>clearVinculado</td>
+<td><strong>http://app.sclrota.com.br/api/retaguardasync/clearVinculado</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_7">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_7" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_7">Retorno<a class="headerlink" href="#retorno_7" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível excluir os dados<br><strong>true</strong>: exclusão bem sucedida</td>
+</tr>
+<tr>
+<td>data</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<hr />
 <h2 id="ler-coletas">Ler Coletas<a class="headerlink" href="#ler-coletas" title="Permanent link">#</a></h2>
 <p>Recupera todos os registros de coletas realizadas em um período, vinculadas a uma conta.</p>
 <table>
@@ -816,7 +888,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_7">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_7" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_8">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_8" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -847,7 +919,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_7">Retorno<a class="headerlink" href="#retorno_7" title="Permanent link">#</a></h3>
+<h3 id="retorno_8">Retorno<a class="headerlink" href="#retorno_8" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1017,7 +1089,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_8">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_8" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_9">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_9" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1044,7 +1116,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_8">Retorno<a class="headerlink" href="#retorno_8" title="Permanent link">#</a></h3>
+<h3 id="retorno_9">Retorno<a class="headerlink" href="#retorno_9" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1146,7 +1218,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_9">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_9" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_10">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_10" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1177,7 +1249,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_9">Retorno<a class="headerlink" href="#retorno_9" title="Permanent link">#</a></h3>
+<h3 id="retorno_10">Retorno<a class="headerlink" href="#retorno_10" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1347,7 +1419,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_10">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_10" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_11">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_11" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1374,7 +1446,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_10">Retorno<a class="headerlink" href="#retorno_10" title="Permanent link">#</a></h3>
+<h3 id="retorno_11">Retorno<a class="headerlink" href="#retorno_11" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1520,7 +1592,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_11">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_11" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_12">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_12" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1547,7 +1619,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_11">Retorno<a class="headerlink" href="#retorno_11" title="Permanent link">#</a></h3>
+<h3 id="retorno_12">Retorno<a class="headerlink" href="#retorno_12" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1673,7 +1745,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_12">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_12" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_13">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_13" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1700,7 +1772,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_12">Retorno<a class="headerlink" href="#retorno_12" title="Permanent link">#</a></h3>
+<h3 id="retorno_13">Retorno<a class="headerlink" href="#retorno_13" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1774,7 +1846,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_13">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_13" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_14">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_14" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1801,7 +1873,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_13">Retorno<a class="headerlink" href="#retorno_13" title="Permanent link">#</a></h3>
+<h3 id="retorno_14">Retorno<a class="headerlink" href="#retorno_14" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1911,7 +1983,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_14">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_14" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_15">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_15" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -1938,7 +2010,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_14">Retorno<a class="headerlink" href="#retorno_14" title="Permanent link">#</a></h3>
+<h3 id="retorno_15">Retorno<a class="headerlink" href="#retorno_15" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2024,7 +2096,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_15">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_15" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_16">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_16" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2051,7 +2123,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_15">Retorno<a class="headerlink" href="#retorno_15" title="Permanent link">#</a></h3>
+<h3 id="retorno_16">Retorno<a class="headerlink" href="#retorno_16" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2137,7 +2209,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_16">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_16" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_17">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_17" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2164,7 +2236,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_16">Retorno<a class="headerlink" href="#retorno_16" title="Permanent link">#</a></h3>
+<h3 id="retorno_17">Retorno<a class="headerlink" href="#retorno_17" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2254,7 +2326,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_17">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_17" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_18">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_18" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2281,7 +2353,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_17">Retorno<a class="headerlink" href="#retorno_17" title="Permanent link">#</a></h3>
+<h3 id="retorno_18">Retorno<a class="headerlink" href="#retorno_18" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2399,7 +2471,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_18">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_18" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_19">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_19" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2432,7 +2504,7 @@
 </table>
 <p><strong>Obs: Uma chamada deve ser feita para receber as coletas individuais e outra para receber a distribuição dos tanques coletivos/comunitários
 afim de se obter todos os registros com o volume total da viagem.</strong></p>
-<h3 id="retorno_18">Retorno<a class="headerlink" href="#retorno_18" title="Permanent link">#</a></h3>
+<h3 id="retorno_19">Retorno<a class="headerlink" href="#retorno_19" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2594,7 +2666,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_19">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_19" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_20">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_20" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2621,7 +2693,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_19">Retorno<a class="headerlink" href="#retorno_19" title="Permanent link">#</a></h3>
+<h3 id="retorno_20">Retorno<a class="headerlink" href="#retorno_20" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2775,7 +2847,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_20">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_20" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_21">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_21" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2802,7 +2874,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_20">Retorno<a class="headerlink" href="#retorno_20" title="Permanent link">#</a></h3>
+<h3 id="retorno_21">Retorno<a class="headerlink" href="#retorno_21" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2888,7 +2960,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_21">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_21" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_22">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_22" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -2915,7 +2987,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_21">Retorno<a class="headerlink" href="#retorno_21" title="Permanent link">#</a></h3>
+<h3 id="retorno_22">Retorno<a class="headerlink" href="#retorno_22" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3009,7 +3081,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_22">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_22" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_23">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_23" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3036,7 +3108,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_22">Retorno<a class="headerlink" href="#retorno_22" title="Permanent link">#</a></h3>
+<h3 id="retorno_23">Retorno<a class="headerlink" href="#retorno_23" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3150,7 +3222,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_23">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_23" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_24">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_24" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3177,7 +3249,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_23">Retorno<a class="headerlink" href="#retorno_23" title="Permanent link">#</a></h3>
+<h3 id="retorno_24">Retorno<a class="headerlink" href="#retorno_24" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3331,7 +3403,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_24">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_24" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_25">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_25" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3358,7 +3430,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_24">Retorno<a class="headerlink" href="#retorno_24" title="Permanent link">#</a></h3>
+<h3 id="retorno_25">Retorno<a class="headerlink" href="#retorno_25" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3468,7 +3540,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_25">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_25" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_26">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_26" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3495,7 +3567,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_25">Retorno<a class="headerlink" href="#retorno_25" title="Permanent link">#</a></h3>
+<h3 id="retorno_26">Retorno<a class="headerlink" href="#retorno_26" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3589,7 +3661,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_26">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_26" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_27">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_27" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3616,7 +3688,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_26">Retorno<a class="headerlink" href="#retorno_26" title="Permanent link">#</a></h3>
+<h3 id="retorno_27">Retorno<a class="headerlink" href="#retorno_27" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3778,7 +3850,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_27">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_27" title="Permanent link">#</a></h3>
+<h3 id="parametros-da-requisicao_28">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_28" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3805,7 +3877,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_27">Retorno<a class="headerlink" href="#retorno_27" title="Permanent link">#</a></h3>
+<h3 id="retorno_28">Retorno<a class="headerlink" href="#retorno_28" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
