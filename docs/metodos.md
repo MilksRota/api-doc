@@ -4,7 +4,7 @@ Os métodos abaixo estão disponíveis para chamada externa da API.
 
 ## Apagar Analises
 
-Reseta todos os dados de análise de uma conta.
+Reseta todos os dados de análise de uma conta credenciada.
 
 |Método | URL
 |-------|----
