@@ -134,6 +134,35 @@ Reseta todos os dados de itinerários vinculados a uma conta.
 
 ___
 
+## Fechar Vigência do Itinerário de uma linha de coleta
+
+Seta uma data de vigência final para o itinerário de coleta de uma determinada linha da conta.
+
+|Método | URL
+|-------|----
+|closeItinerario |**http://app.sclrota.com.br/api/retaguardasync/closeItinerario**|
+
+
+### Parâmetros da requisição
+
+| Parâmetro | Descrição
+|-----------|----------
+| conta_id  | Código de identificação da conta
+| token     | Token de autorização da conta na API
+| doc       | CNPJ cadastrado para a conta (com máscara : 99.99.999/9999-99
+| linha     | código da linha onde será executado o fechamento
+
+
+### Retorno
+
+| Retorno | Descrição | Valores
+|---------|-----------|-------
+| success | Se a operação foi bem sucedida ou não | __false__: não foi possível fechar a vigência<br>__true__: fechamento executado
+| data    | Mensagem de confirmação do resultado
+
+___
+
+
 ## Apagar Tags NFC
 
 Reseta todos os dados de tags NFC vinculadas a uma conta.
