@@ -341,6 +341,12 @@
             </li>
           
             <li class="anchor">
+              <a title="ler Monitoramento" href="#ler-monitoramento">
+                ler Monitoramento
+              </a>
+            </li>
+          
+            <li class="anchor">
               <a title="Ler Vinculados" href="#ler-vinculados">
                 Ler Vinculados
               </a>
@@ -397,7 +403,7 @@
           <h1 id="metodos-leitura-e-exclusao-manutencao-das-informacoes-no-servidor">Métodos Leitura e Exclusão  - Manutenção das informações no Servidor<a class="headerlink" href="#metodos-leitura-e-exclusao-manutencao-das-informacoes-no-servidor" title="Permanent link">#</a></h1>
 <p>Os métodos abaixo estão disponíveis para chamada externa da API.</p>
 <h2 id="apagar-analises">Apagar Analises<a class="headerlink" href="#apagar-analises" title="Permanent link">#</a></h2>
-<p>Reseta todos os dados de análise de uma conta.</p>
+<p>Reseta todos os dados de análise de uma conta credenciada.</p>
 <table>
 <thead>
 <tr>
@@ -3834,6 +3840,49 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
+<h2 id="ler-monitoramento">ler Monitoramento<a class="headerlink" href="#ler-monitoramento" title="Permanent link">#</a></h2>
+<p>Recupera os registros e monitoramento das viagens em andamento ou finalizadas em um dia determinado</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readMonitoramento</td>
+<td><strong>http://app.sclrota.com.br/api/retaguardasync/readMonitoramento</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_28">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_28" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Parâmetro</th>
+<th>Descrição</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>conta_id</td>
+<td>Código de identificação da conta</td>
+</tr>
+<tr>
+<td>token</td>
+<td>Token de autorização da conta na API</td>
+</tr>
+<tr>
+<td>dia</td>
+<td>Data para a qual se deseja recuperar os registros</td>
+</tr>
+<tr>
+<td>viagemId</td>
+<td>Identificador único para uma viagem específica (opcional). Se informado retorna apenas os registro desta viagem na data.</td>
+</tr>
+</tbody>
+</table>
 <h2 id="ler-vinculados">Ler Vinculados<a class="headerlink" href="#ler-vinculados" title="Permanent link">#</a></h2>
 <p>recupera os registros dos produtores vinculados em tanques coletivos.</p>
 <table>
@@ -3850,7 +3899,167 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="parametros-da-requisicao_28">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_28" title="Permanent link">#</a></h3>
+<h3 id="retorno_28">Retorno<a class="headerlink" href="#retorno_28" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros de monitoramento recuperados</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="estrutura-do-registro-de-monitoramento-de-viagens-e-monitoramento-de-visitas">Estrutura do Registro de Monitoramento de viagens e Monitoramento de Visitas<a class="headerlink" href="#estrutura-do-registro-de-monitoramento-de-viagens-e-monitoramento-de-visitas" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+<th>Monitoramento de viagem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+<td></td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início da viagem monitorada</td>
+<td></td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término da viagem monitorada</td>
+<td></td>
+</tr>
+<tr>
+<td>veiculo_id</td>
+<td>Identificação única do veículo na API</td>
+<td></td>
+</tr>
+<tr>
+<td>coletor_id</td>
+<td>Identificação única do agente de coleta (coletor) na API</td>
+<td></td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única da conta (empresa) na API</td>
+<td></td>
+</tr>
+<tr>
+<td>linha_id</td>
+<td>Identificação única da linha principal de coleta aberta para a viagem monitorada na API</td>
+<td></td>
+</tr>
+<tr>
+<td>viagem_id</td>
+<td>Identificador  única do registro de viagem <strong>definitivo</strong> após sincronização do aplicativo e finalização da viagem</td>
+<td></td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>Identificador único do aparelho celular utilizado pelo agente de coleta na viagem</td>
+<td></td>
+</tr>
+<tr>
+<td>dt_update</td>
+<td>Data e hora que ocorreu o evento monitorado</td>
+<td></td>
+</tr>
+<tr>
+<td>situacao</td>
+<td>A = Aberta<br> L = Liberada para descarga <br> F = Finalizada</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Descrição</th>
+<th>Monitoramento de visitas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>Identificação única do registro na API</td>
+<td></td>
+</tr>
+<tr>
+<td>dt_inicio</td>
+<td>Data de início da viagem monitorada</td>
+<td></td>
+</tr>
+<tr>
+<td>dt_fim</td>
+<td>Data de término da viagem monitorada</td>
+<td></td>
+</tr>
+<tr>
+<td>veiculo_id</td>
+<td>Identificação única do veículo na API</td>
+<td></td>
+</tr>
+<tr>
+<td>coletor_id</td>
+<td>Identificação única do agente de coleta (coletor) na API</td>
+<td></td>
+</tr>
+<tr>
+<td>conta_id</td>
+<td>Identificação única da conta (empresa) na API</td>
+<td></td>
+</tr>
+<tr>
+<td>linha_id</td>
+<td>Identificação única da linha principal de coleta aberta para a viagem monitorada na API</td>
+<td></td>
+</tr>
+<tr>
+<td>viagem_id</td>
+<td>Identificador  única do registro de viagem <strong>definitivo</strong> após sincronização do aplicativo e finalização da viagem</td>
+<td></td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>Identificador único do aparelho celular utilizado pelo agente de coleta na viagem</td>
+<td></td>
+</tr>
+<tr>
+<td>dt_update</td>
+<td>Data e hora que ocorreu o evento monitorado</td>
+<td></td>
+</tr>
+<tr>
+<td>situacao</td>
+<td>A = Aberta<br> L = Liberada para descarga <br> F = Finalizada</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="parametros-da-requisicao_29">Parâmetros da requisição<a class="headerlink" href="#parametros-da-requisicao_29" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3877,7 +4086,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="retorno_28">Retorno<a class="headerlink" href="#retorno_28" title="Permanent link">#</a></h3>
+<h3 id="retorno_29">Retorno<a class="headerlink" href="#retorno_29" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
