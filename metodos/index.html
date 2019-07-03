@@ -3875,7 +3875,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 <tr>
 <td>dia</td>
-<td>Data para a qual se deseja recuperar os registros</td>
+<td>Data para a qual se deseja recuperar os registros &lt;&gt; Formato ::  AAAA-MM-DD</td>
 </tr>
 <tr>
 <td>viagemId</td>
@@ -3883,7 +3883,7 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h3 id="estrutura-do-registro-de-monitoramento-de-viagens-e-monitoramento-de-visitas">Estrutura do Registro de Monitoramento de viagens e Monitoramento de Visitas<a class="headerlink" href="#estrutura-do-registro-de-monitoramento-de-viagens-e-monitoramento-de-visitas" title="Permanent link">#</a></h3>
+<h3 id="estrutura-dos-registros-de-monitoramento-de-viagens-e-monitoramento-de-visitas">Estrutura dos Registros de Monitoramento de viagens e Monitoramento de Visitas<a class="headerlink" href="#estrutura-dos-registros-de-monitoramento-de-viagens-e-monitoramento-de-visitas" title="Permanent link">#</a></h3>
 <table>
 <thead>
 <tr>
@@ -3965,53 +3965,58 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 <td></td>
 </tr>
 <tr>
-<td>dt_inicio</td>
-<td>Data de início da viagem monitorada</td>
+<td>viagem_id</td>
+<td>Identificador  única do registro de viagem na tabela de monitoramento de viagens</td>
 <td></td>
 </tr>
 <tr>
-<td>dt_fim</td>
-<td>Data de término da viagem monitorada</td>
-<td></td>
-</tr>
-<tr>
-<td>veiculo_id</td>
-<td>Identificação única do veículo na API</td>
+<td>fazenda_id</td>
+<td>Identificação única da fazenda (Ponto de coleta) visitado</td>
 <td></td>
 </tr>
 <tr>
 <td>coletor_id</td>
-<td>Identificação única do agente de coleta (coletor) na API</td>
+<td>Identificação única do agente de coleta na API</td>
 <td></td>
 </tr>
 <tr>
-<td>conta_id</td>
-<td>Identificação única da conta (empresa) na API</td>
+<td>coleta</td>
+<td>Volume total coletado na visita</td>
 <td></td>
 </tr>
 <tr>
-<td>linha_id</td>
-<td>Identificação única da linha principal de coleta aberta para a viagem monitorada na API</td>
+<td>coletado</td>
+<td>1 = Visita coletada<br> 2 = Registro de controle para abertura de viagem <br> 0 = Cancelado</td>
 <td></td>
 </tr>
 <tr>
-<td>viagem_id</td>
-<td>Identificador  única do registro de viagem <strong>definitivo</strong> após sincronização do aplicativo e finalização da viagem</td>
+<td>motivo cancelamento</td>
+<td>Motivo de cancelamento da visita monitorada</td>
 <td></td>
 </tr>
 <tr>
-<td>uuid</td>
-<td>Identificador único do aparelho celular utilizado pelo agente de coleta na viagem</td>
+<td>dt_visita</td>
+<td>Data e hora da visita, formato <strong>"ANO-MES-DIA HORA:MINUTO:SEGUNDO"</strong></td>
 <td></td>
 </tr>
 <tr>
-<td>dt_update</td>
-<td>Data e hora que ocorreu o evento monitorado</td>
+<td>temperatura</td>
+<td>Temperatura do leite no momento da coleta</td>
 <td></td>
 </tr>
 <tr>
-<td>situacao</td>
-<td>A = Aberta<br> L = Liberada para descarga <br> F = Finalizada</td>
+<td>tipo</td>
+<td>A = Aberta<br> L = Liberada para descarga <br> V = Visita &lt;&gt; F = Finalizada</td>
+<td></td>
+</tr>
+<tr>
+<td>latitude</td>
+<td>latitude onde ocorreu o evento  monitorado</td>
+<td></td>
+</tr>
+<tr>
+<td>longitude</td>
+<td>Longitude onde ocorreu o evento  monitorado</td>
 <td></td>
 </tr>
 </tbody>
