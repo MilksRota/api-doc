@@ -3883,49 +3883,6 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 </tr>
 </tbody>
 </table>
-<h2 id="ler-vinculados">Ler Vinculados<a class="headerlink" href="#ler-vinculados" title="Permanent link">#</a></h2>
-<p>recupera os registros dos produtores vinculados em tanques coletivos.</p>
-<table>
-<thead>
-<tr>
-<th>Método</th>
-<th>URL</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>readVinculado</td>
-<td><strong>http://app.sclrota.com.br/api/retaguardasync/readVinculado</strong></td>
-</tr>
-</tbody>
-</table>
-<h3 id="retorno_28">Retorno<a class="headerlink" href="#retorno_28" title="Permanent link">#</a></h3>
-<table>
-<thead>
-<tr>
-<th>Retorno</th>
-<th>Descrição</th>
-<th>Valores</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>success</td>
-<td>Se a operação foi bem sucedida ou não</td>
-<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
-</tr>
-<tr>
-<td>message</td>
-<td>Mensagem de confirmação do resultado</td>
-<td></td>
-</tr>
-<tr>
-<td>data</td>
-<td>Array de objetos JSON representando os registros de monitoramento recuperados</td>
-<td></td>
-</tr>
-</tbody>
-</table>
 <h3 id="estrutura-do-registro-de-monitoramento-de-viagens-e-monitoramento-de-visitas">Estrutura do Registro de Monitoramento de viagens e Monitoramento de Visitas<a class="headerlink" href="#estrutura-do-registro-de-monitoramento-de-viagens-e-monitoramento-de-visitas" title="Permanent link">#</a></h3>
 <table>
 <thead>
@@ -4055,6 +4012,49 @@ afim de se obter todos os registros com o volume total da viagem.</strong></p>
 <tr>
 <td>situacao</td>
 <td>A = Aberta<br> L = Liberada para descarga <br> F = Finalizada</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="ler-vinculados">Ler Vinculados<a class="headerlink" href="#ler-vinculados" title="Permanent link">#</a></h2>
+<p>recupera os registros dos produtores vinculados em tanques coletivos.</p>
+<table>
+<thead>
+<tr>
+<th>Método</th>
+<th>URL</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>readVinculado</td>
+<td><strong>http://app.sclrota.com.br/api/retaguardasync/readVinculado</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="retorno_28">Retorno<a class="headerlink" href="#retorno_28" title="Permanent link">#</a></h3>
+<table>
+<thead>
+<tr>
+<th>Retorno</th>
+<th>Descrição</th>
+<th>Valores</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>success</td>
+<td>Se a operação foi bem sucedida ou não</td>
+<td><strong>false</strong>: não foi possível recuperar os dados<br><strong>true</strong>: operação bem sucedida</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Mensagem de confirmação do resultado</td>
+<td></td>
+</tr>
+<tr>
+<td>data</td>
+<td>Array de objetos JSON representando os registros de monitoramento recuperados</td>
 <td></td>
 </tr>
 </tbody>
