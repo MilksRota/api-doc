@@ -1202,6 +1202,59 @@ recupera os registros das viagens finalizadas em um período.
 | comunitario_pendente | 0 => Distribuição dos tanques coletivos da viagem já resolvidos<br> 1 => Pendência de distribuição de volume em tanques coletivos |
 | bocas | Quantidade de compartimentos no veículo utilizados no trasnporte do produto |
 
+## Ler Monitoramento
+
+Recupera os registros e monitoramento das viagens em andamento ou finalizadas em um dia determinado
+
+
+|Método | URL
+|-------|----
+|readMonitoramento |**http://app.sclrota.com.br/api/retaguardasync/readMonitoramento**|
+
+### Parâmetros da requisição
+
+| Parâmetro | Descrição
+|-----------|----------
+| conta_id  | Código de identificação da conta
+| token     | Token de autorização da conta na API
+| dia       | Data para a qual se deseja recuperar os registros <> Formato ::  AAAA-MM-DD
+| viagemId  | Identificador único para uma viagem específica (opcional). Se informado retorna apenas os registro desta viagem na data.
+
+
+
+### Estrutura dos Registros de Monitoramento de viagens e Monitoramento de Visitas
+
+| Campo | Descrição |Monitoramento de viagem|
+|-------|-----------|-----------------------------|
+| id    | Identificação única do registro na API |
+| dt_inicio | Data de início da viagem monitorada
+| dt_fim    | Data de término da viagem monitorada
+| veiculo_id | Identificação única do veículo na API |
+| coletor_id | Identificação única do agente de coleta (coletor) na API|
+| conta_id | Identificação única da conta (empresa) na API|
+| linha_id | Identificação única da linha principal de coleta aberta para a viagem monitorada na API|
+| viagem_id | Identificador  única do registro de viagem **definitivo** após sincronização do aplicativo e finalização da viagem|
+| uuid | Identificador único do aparelho celular utilizado pelo agente de coleta na viagem |
+| dt_update | Data e hora que ocorreu o evento monitorado  |
+| situacao | A = Aberta<br> L = Liberada para descarga <br> F = Finalizada |
+
+
+| Campo | Descrição |Monitoramento de visitas|
+|-------|-----------|-----------------------------|
+| id    | Identificação única do registro na API |
+| viagem_id | Identificador  única do registro de viagem na tabela de monitoramento de viagens|
+| fazenda_id | Identificação única da fazenda (Ponto de coleta) visitado |
+| coletor_id | Identificação única do agente de coleta na API |
+| coleta | Volume total coletado na visita
+| coletado | 1 = Visita coletada<br> 2 = Registro de controle para abertura de viagem <br> 0 = Cancelado |
+| motivo cancelamento | Motivo de cancelamento da visita monitorada |
+| dt_visita | Data e hora da visita, formato __"ANO-MES-DIA HORA:MINUTO:SEGUNDO"__ |
+| temperatura| Temperatura do leite no momento da coleta|
+| tipo | Tipo de evento recebido <br> A = Abertura<br> L = Liberação para descarga <br> V = Visita <br> F = Finalização |
+| latitude | latitude onde ocorreu o evento  monitorado |
+| longitude | Longitude onde ocorreu o evento  monitorado  |
+
+
 ## Ler Vinculados
 
 recupera os registros dos produtores vinculados em tanques coletivos.
@@ -1209,6 +1262,14 @@ recupera os registros dos produtores vinculados em tanques coletivos.
 |Método | URL
 |-------|----
 |readVinculado |**http://app.sclrota.com.br/api/retaguardasync/readVinculado**|
+
+### Retorno
+
+| Retorno | Descrição | Valores
+|---------|-----------|-------
+| success | Se a operação foi bem sucedida ou não | __false__: não foi possível recuperar os dados<br>__true__: operação bem sucedida
+| message | Mensagem de confirmação do resultado
+| data    | Array de objetos JSON representando os registros de monitoramento recuperados
 
 
 ### Parâmetros da requisição
